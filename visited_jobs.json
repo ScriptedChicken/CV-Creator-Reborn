@@ -1,65 +1,51 @@
 {
-    "Cawthron": {
-        "job_id": "71789136",
-        "job_title": "Data Scientist - GIS Analyst",
-        "location": "Tasman",
-        "url": "https://www.seek.co.nz/job/71789136",
+    "72082298": {
+        "job_title": "Python Developer (s)",
+        "company_name": "Recruitment Hive",
+        "location": "Melbourne",
+        "url": "https://www.seek.co.nz/job/72082298",
         "applied": false
     },
-    "Bay of Plenty Regional Council": {
-        "job_id": "71700413",
-        "job_title": "Geospatial Analyst",
-        "location": "Bay of Plenty",
-        "url": "https://www.seek.co.nz/job/71700413",
+    "72049427": {
+        "job_title": "Contract position - Python",
+        "company_name": "Halcyon Knights",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/72049427",
         "applied": false
     },
-    "Taranaki Regional Council": {
-        "job_id": "71701409",
-        "job_title": "GIS - Specialist - Fixed-term (12 months)",
-        "location": "Taranaki",
-        "url": "https://www.seek.co.nz/job/71701409",
+    "72023223": {
+        "job_title": "Senior E-commerce Python Developer",
+        "company_name": "Outback Equipment",
+        "location": "Brisbane",
+        "url": "https://www.seek.co.nz/job/72023223",
         "applied": false
     },
-    "Land Information New Zealand": {
-        "job_id": "71747193",
-        "job_title": "Geospatial Specialist / M\u0101tanga T\u0101tai Whenua - Analysis",
-        "location": "Canterbury",
-        "url": "https://www.seek.co.nz/job/71747193",
+    "71982147": {
+        "job_title": "Senior Software Engineer - Python",
+        "company_name": "Lookahead",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/71982147",
         "applied": false
     },
-    "FMNZ": {
-        "job_id": "71591000",
-        "job_title": "GIS Technician",
-        "location": "Hawkes Bay",
-        "url": "https://www.seek.co.nz/job/71591000",
+    "71821782": {
+        "job_title": "Python Developer",
+        "company_name": "Healius",
+        "location": "Brisbane",
+        "url": "https://www.seek.co.nz/job/71821782",
         "applied": false
     },
-    "Mainpower New Zealand": {
-        "job_id": "71691141",
-        "job_title": "AutoCAD / GIS Technician",
-        "location": "Canterbury",
-        "url": "https://www.seek.co.nz/job/71691141",
+    "71760814": {
+        "job_title": "PYTHON DEVELOPER",
+        "company_name": "Spark Recruitment",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/71760814",
         "applied": false
     },
-    "Horizons Regional Council": {
-        "job_id": "71850763",
-        "job_title": "Asset Information Advisor - Technical",
-        "location": "Manawatu",
-        "url": "https://www.seek.co.nz/job/71850763",
-        "applied": false
-    },
-    "Harrison Grierson Consultants": {
-        "job_id": "71719049",
-        "job_title": "GIS Developer",
-        "location": "Auckland",
-        "url": "https://www.seek.co.nz/job/71719049",
-        "applied": true
-    },
-    "Wood & Partners Consultants Ltd": {
-        "job_id": "71899033",
-        "job_title": "Geospatial Specialist",
-        "location": "Auckland",
-        "url": "https://www.seek.co.nz/job/71899033",
+    "71759839": {
+        "job_title": "Python Developer",
+        "company_name": "SYPAQ Systems",
+        "location": "Melbourne",
+        "url": "https://www.seek.co.nz/job/71759839",
         "applied": false
     }
 }

@@ -57,13 +57,16 @@ def log_in():
     wait_random()
 
 
-def save_visited_job(company_name, data_dict):
-    visited_jobs[company_name] = data_dict
+def save_visited_job(job_id, data_dict):
+    visited_jobs[job_id] = data_dict
     with open('visited_jobs.json', 'w') as file:
         json.dump(visited_jobs, file, indent=4)
-        
+
+
+role = "developer"
+
 TEMP_PATH = r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary"
-url = r"https://www.seek.co.nz/api/chalice-search/v4/search?siteKey=NZ-Main&keywords=GIS"
+url = r"https://www.seek.co.nz/api/chalice-search/v4/search?siteKey=NZ-Main&where=All+Australia&keywords=Python+Developer"
 res = requests.get(url)
 print(res.status_code)
 
@@ -87,14 +90,14 @@ for listing in res.json().get('data'):
     job_url = r"https://www.seek.co.nz/job/" + job_id
 
     data_dict = {
-        "job_id": job_id,
         "job_title": job_title,
+        "company_name": company_name,
         "location": location,
         "url": job_url,
         "applied": False
     }
-    
-    if company_name in visited_jobs.keys():
+
+    if job_id in visited_jobs.keys():
         pass
     
     else:
@@ -105,9 +108,9 @@ for listing in res.json().get('data'):
         }
     
         if is_agency:
-            template_path = os.path.join("templates", "cover_letter_angus_hunt_gis_agency.docx")
+            template_path = os.path.join("templates", f"cover_letter_angus_hunt_{role}_agency.docx")
         else:
-            template_path = os.path.join("templates", "cover_letter_angus_hunt_gis.docx")
+            template_path = os.path.join("templates", f"cover_letter_angus_hunt_{role}.docx")
         output_folder = "outputs"
     
         doc = Document(template_path)
@@ -126,7 +129,7 @@ for listing in res.json().get('data'):
     
         cv_name = return_clean_name(f'cv_angus_hunt_{job_title}.docx')
         cv_path = os.path.join('outputs', cv_name)
-        shutil.copyfile(os.path.join('templates', 'cv_angus_hunt_gis.docx'), cv_path)
+        shutil.copyfile(os.path.join('templates', f'cv_angus_hunt_{role}.docx'), cv_path)
     
         cover_letter_temp = os.path.join(TEMP_PATH, cover_letter_name)
         shutil.copyfile(cover_letter_path, cover_letter_temp)
@@ -134,38 +137,36 @@ for listing in res.json().get('data'):
         cv_temp = os.path.join(TEMP_PATH, cv_name)
         shutil.copyfile(cv_path, cv_temp)
 
+        driver.get(job_url)
+
         try:
-            driver.get(job_url)
+            already_applied_flag = driver.find_element(By.ID, 'applied')
+            print("Already applied - skipping")
+
         except:
-            driver = webdriver.Chrome(service=ChromeService(), options=chrome_options)
-            driver.get(job_url)
-    
-        try:
             quick_apply_button = WebDriverWait(driver, 2).until(
                 EC.presence_of_element_located((By.LINK_TEXT, 'Quick apply'))
             )
             quick_apply_button.click()
 
             time.sleep(2)
-            if EC.presence_of_element_located((By.ID, 'emailAddress')):
-                log_in()
-    
+            if EC.presence_of_element_located((By.ID, 'password')):
+                try:
+                    log_in()
+                except:
+                    print("Automatic log-in failed; please enter login details manually")
+
             pyperclip.copy(TEMP_PATH)
-    
+
             print("Please complete application. This browser will expire in 5 mins.")
             application_success = WebDriverWait(driver, 300).until(
                 EC.url_contains('success')
             )
+
             print(f"Application for {job_title} sent successfully.")
-            data_dict["applied"] = False
-    
-        except TimeoutException:
-            pass
+            data_dict["applied"] = True
 
-        except WebDriverException:
-            pass
-
-        save_visited_job(company_name, data_dict)
+        save_visited_job(job_id, data_dict)
         os.remove(cover_letter_temp)
         os.remove(cv_temp)
 
