@@ -27,6 +27,20 @@
         "url": "https://www.seek.co.nz/job/71982147",
         "applied": false
     },
+    "71467693": {
+        "job_title": "Python Developer",
+        "company_name": "Aurec Group",
+        "location": "Canberra",
+        "url": "https://www.seek.co.nz/job/71467693",
+        "applied": false
+    },
+    "71568851": {
+        "job_title": "Backend Python Developer",
+        "company_name": "Talent International",
+        "location": "Brisbane",
+        "url": "https://www.seek.co.nz/job/71568851",
+        "applied": false
+    },
     "71821782": {
         "job_title": "Python Developer",
         "company_name": "Healius",
@@ -34,18 +48,18 @@
         "url": "https://www.seek.co.nz/job/71821782",
         "applied": false
     },
+    "72070972": {
+        "job_title": "Data Engineer",
+        "company_name": "University of Tasmania",
+        "location": "Hobart",
+        "url": "https://www.seek.co.nz/job/72070972",
+        "applied": false
+    },
     "71760814": {
         "job_title": "PYTHON DEVELOPER",
         "company_name": "Spark Recruitment",
         "location": "Sydney",
         "url": "https://www.seek.co.nz/job/71760814",
-        "applied": false
-    },
-    "71759839": {
-        "job_title": "Python Developer",
-        "company_name": "SYPAQ Systems",
-        "location": "Melbourne",
-        "url": "https://www.seek.co.nz/job/71759839",
         "applied": false
     }
 }
