@@ -61,5 +61,145 @@
         "location": "Sydney",
         "url": "https://www.seek.co.nz/job/71760814",
         "applied": false
+    },
+    "71759839": {
+        "job_title": "Python Developer",
+        "company_name": "SYPAQ Systems",
+        "location": "Melbourne",
+        "url": "https://www.seek.co.nz/job/71759839",
+        "applied": false
+    },
+    "71976549": {
+        "job_title": "Senior Software Engineer (Python)",
+        "company_name": "PCCW Global",
+        "location": "Brisbane",
+        "url": "https://www.seek.co.nz/job/71976549",
+        "applied": false
+    },
+    "71857793": {
+        "job_title": "Senior Backend Engineer - Python | Django | Web API",
+        "company_name": "Genesis Recruitment Solutions",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/71857793",
+        "applied": false
+    },
+    "71703496": {
+        "job_title": "Python & SQL Developer",
+        "company_name": "Recruitment Hive",
+        "location": "Melbourne",
+        "url": "https://www.seek.co.nz/job/71703496",
+        "applied": false
+    },
+    "71883044": {
+        "job_title": "Senior Backend Engineer - Python | Web API | Microservices",
+        "company_name": "Genesis Recruitment Solutions",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/71883044",
+        "applied": false
+    },
+    "72094894": {
+        "job_title": "ML Engineer",
+        "company_name": "TheDriveGroup",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/72094894",
+        "applied": false
+    },
+    "71690802": {
+        "job_title": "Python & SQL Developer",
+        "company_name": "Noventus",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/71690802",
+        "applied": true
+    },
+    "71467808": {
+        "job_title": "Python Developer",
+        "company_name": "Aurec Group",
+        "location": "Adelaide",
+        "url": "https://www.seek.co.nz/job/71467808",
+        "applied": false
+    },
+    "71635098": {
+        "job_title": "Python Developer - Security Clearance",
+        "company_name": "Morgan Consulting",
+        "location": "Melbourne",
+        "url": "https://www.seek.co.nz/job/71635098",
+        "applied": false
+    },
+    "71796223": {
+        "job_title": "Sr Java (Core) + Python Developer, Market Making, High Frequency Trading",
+        "company_name": "Westbury Partners",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/71796223",
+        "applied": false
+    },
+    "71467752": {
+        "job_title": "Python Developer",
+        "company_name": "Aurec Group",
+        "location": "Brisbane",
+        "url": "https://www.seek.co.nz/job/71467752",
+        "applied": true
+    },
+    "71593448": {
+        "job_title": "Python Developer",
+        "company_name": "Nielsen",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/71593448",
+        "applied": false
+    },
+    "71972128": {
+        "job_title": "Software Engineer - AI, ML, Robotics & Computer Vision",
+        "company_name": "Swordfish Computing",
+        "location": "Adelaide",
+        "url": "https://www.seek.co.nz/job/71972128",
+        "applied": false
+    },
+    "71690274": {
+        "job_title": "Quantitative Python Developer Capital Markets Quant Desk",
+        "company_name": "Clarrow",
+        "location": "Melbourne",
+        "url": "https://www.seek.co.nz/job/71690274",
+        "applied": false
+    },
+    "71537142": {
+        "job_title": "Python Developer - 12 Months Contract - Sydney - $800 a day - Hybrid Remote Work",
+        "company_name": "Allura Partners",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/71537142",
+        "applied": true
+    },
+    "71524771": {
+        "job_title": "Python Developer",
+        "company_name": "Halcyon Knights",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/71524771",
+        "applied": false
+    },
+    "72055690": {
+        "job_title": "Machine Learning Engineer",
+        "company_name": "CoTalent",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/72055690",
+        "applied": false
+    },
+    "71471681": {
+        "job_title": "Python and SQL Developer",
+        "company_name": "Canberra Consulting",
+        "location": "Canberra",
+        "url": "https://www.seek.co.nz/job/71471681",
+        "applied": false
+    },
+    "71631404": {
+        "job_title": "Senior Python R&D developer / P2P and network specialist",
+        "company_name": "FIRE FRONT SOLUTIONS PTY. LTD.",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/71631404",
+        "applied": false
+    },
+    "71665354": {
+        "job_title": "Senior Python Engineer",
+        "company_name": "Paxus",
+        "location": "Melbourne",
+        "url": "https://www.seek.co.nz/job/71665354",
+        "applied": false
     }
 }

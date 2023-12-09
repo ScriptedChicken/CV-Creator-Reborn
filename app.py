@@ -20,13 +20,12 @@ class QuickApplyException(Exception):
 
 
 class Seeker(object):
-    def __init__(self, role, temp_path, where, keywords, pause_description_sec):
+    def __init__(self, role, temp_path, where, keywords):
         self.driver = webdriver.Chrome(service=ChromeService(), options=webdriver.ChromeOptions())
         self.role = role
         self.temp_path = temp_path
         self.base_url = r"https://www.seek.co.nz/api/chalice-search/v4/search?siteKey=NZ-Main&where=" + where + "&keywords=" + keywords
         self.output_folder = "outputs"
-        self.pause_description_sec = pause_description_sec
         self.job_title = None
         self.location = None
         self.job_id = None
@@ -146,6 +145,7 @@ class Seeker(object):
                 break
         
             for listing in listings_array:
+                self.temporary_documents = []
                 is_agency = False
                 self.company_name = listing.get("companyName")
         
@@ -173,7 +173,6 @@ class Seeker(object):
                 else:
                     self.driver.get(self.job_url)
                     print(f"Got {self.job_url}")
-                    time.sleep(self.pause_description_sec)
 
                     self.replacements = {
                         "COMPANY_NAME": self.company_name,
@@ -182,7 +181,6 @@ class Seeker(object):
                     }
 
                     self.job_details = self.driver.find_element(By.CSS_SELECTOR, 'div[data-automation="jobAdDetails"]').text
-                    print(self.job_details)
 
                     if self.role == "chat_gpt_test":
                         self.query_chat_gpt()
@@ -229,15 +227,17 @@ class Seeker(object):
                         self.driver = webdriver.Chrome(service=ChromeService(), options=webdriver.ChromeOptions())
         
                     self.save_visited_job()
-                    self.remove_temporary_files()
+                    try:
+                        self.remove_temporary_files()
+                    except Exception as e:
+                        print(f"Couldn't remove temporary files: {e}")
 
 
 seeker = Seeker(
     role="developer",
     temp_path=r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary",
     where="All+Australia",
-    keywords="Python+Developer",
-    pause_description_sec=30
+    keywords="Python+Developer"
 )
 seeker.execute()
 print("Complete")
