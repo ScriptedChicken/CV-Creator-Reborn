@@ -258,6 +258,8 @@ class Interface(Seeker):
     def __init__(self, root):
         self.root = root
         self.root.title("Seeker")
+        self.driver = None
+        self.temporary_documents = []
 
         self.main_frame = ttk.Frame(root)
         self.main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
@@ -319,7 +321,8 @@ class Interface(Seeker):
         threading.Thread(target=self.apply).start()
 
     def quit_action(self):
-        self.driver.quit()
+        if self.driver is not None:
+            self.driver.quit()
         self.remove_temporary_files()
         sys.exit()
 
