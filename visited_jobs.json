@@ -201,5 +201,26 @@
         "location": "Melbourne",
         "url": "https://www.seek.co.nz/job/71665354",
         "applied": false
+    },
+    "72045390": {
+        "job_title": "Casual Software Engineer",
+        "company_name": "NetApp",
+        "location": "Canberra",
+        "url": "https://www.seek.co.nz/job/72045390",
+        "applied": false
+    },
+    "71951051": {
+        "job_title": "Software Engineer(s)",
+        "company_name": "Saab",
+        "location": "Melbourne",
+        "url": "https://www.seek.co.nz/job/71951051",
+        "applied": false
+    },
+    "71506709": {
+        "job_title": "Python Security Software Developer",
+        "company_name": "Paxus",
+        "location": "Canberra",
+        "url": "https://www.seek.co.nz/job/71506709",
+        "applied": false
     }
 }

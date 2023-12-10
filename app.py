@@ -13,6 +13,9 @@ from selenium.common.exceptions import NoSuchWindowException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from openai import OpenAI
+import tkinter as tk
+from tkinter import ttk, filedialog, NORMAL, DISABLED
+import threading
 
 
 class QuickApplyException(Exception):
@@ -21,7 +24,7 @@ class QuickApplyException(Exception):
 
 class Seeker(object):
     def __init__(self, role, temp_path, where, keywords):
-        self.driver = webdriver.Chrome(service=ChromeService(), options=webdriver.ChromeOptions())
+        self.driver = None
         self.role = role
         self.temp_path = temp_path
         self.base_url = r"https://www.seek.co.nz/api/chalice-search/v4/search?siteKey=NZ-Main&where=" + where + "&keywords=" + keywords
@@ -46,6 +49,8 @@ class Seeker(object):
         self.cover_letter_name = None
         self.visited_jobs = None
         self.temporary_documents = []
+        self.listings_array = []
+        self.listings_iterator = None
         
     @staticmethod
     def return_clean_name(name):
@@ -113,7 +118,11 @@ class Seeker(object):
             for paragraph in self.document.paragraphs:
                 if key in paragraph.text:
                     try:
-                        paragraph.text = paragraph.text.replace(key, value)
+                        runs = paragraph.runs
+                        for i in range(len(runs)):
+                            if key in runs[i].text:
+                                text = runs[i].text.replace(key, value)
+                                runs[i].text = text
                     except TypeError:
                         pass
 
@@ -130,114 +139,205 @@ class Seeker(object):
         )
         quick_apply_button.click()
 
-    def execute(self):
-        for page_num in range(0, 100):
+    def load_pages(self, max_pages=1):
+        for page_num in range(0, max_pages):
             self.wait_random()
             url = self.base_url + f"&page={page_num}"
             res = requests.get(url)
             print(res.status_code)
-            listings_array = res.json().get('data')
+            self.listings_array.extend(res.json().get('data'))
+        self.listings_iterator = iter(self.listings_array)
+
+    def complete_application(self):
+        if EC.presence_of_element_located((By.ID, 'password')):
+            try:
+                self.log_in()
+            except:
+                print("Automatic log-in failed; please enter login details manually")
+
+        pyperclip.copy(self.temp_path)
+
+        print("Please complete application. This browser will expire in 5 mins.")
+
+        try:
+            WebDriverWait(self.driver, 300).until(
+                EC.presence_of_element_located((By.ID, 'applicationSent'))
+            )
+            print(f"Application for {self.job_title} sent successfully.")
+            self.data_dict["applied"] = True
+
+        except NoSuchWindowException:
+            print("Reopening closed browser")
+            self.driver = webdriver.Chrome(service=ChromeService(), options=webdriver.ChromeOptions())
+
+    def apply(self):
+        if self.driver is None:
+            self.driver = webdriver.Chrome(service=ChromeService(), options=webdriver.ChromeOptions())
+
+        try:
+            listing = next(self.listings_iterator)
+        except StopIteration:
+            print("Completed all listings")
+            return
+
+        self.read_visited_jobs()
+        self.temporary_documents = []
+        is_agency = False
+        self.company_name = listing.get("companyName")
+
+        if self.company_name is None:
+            is_agency = True
+            self.company_name = listing.get("advertiser").get('description')
+
+        self.job_title = listing.get("title")
+        self.location = listing.get("location")
+        self.job_id = listing.get('solMetadata').get('jobId')
+        self.job_url = r"https://www.seek.co.nz/job/" + self.job_id
+
+        self.data_dict = {
+            "job_title": self.job_title,
+            "company_name": self.company_name,
+            "location": self.location,
+            "url": self.job_url,
+            "applied": False
+        }
+
+        if self.job_id in self.visited_jobs.keys():
+            print("Already applied")
+
+        else:
+            self.driver.get(self.job_url)
+            print(f"Got {self.job_url}")
+
+            self.replacements = {
+                "COMPANY_NAME": self.company_name,
+                "JOB_TITLE": self.job_title,
+                "LOCATION_NAME": self.location
+            }
+
+            self.job_details = self.driver.find_element(By.CSS_SELECTOR, 'div[data-automation="jobAdDetails"]').text
+
+            if self.role == "chat_gpt_test":
+                self.query_chat_gpt()
+
+            if is_agency:
+                self.template_path = os.path.join("templates", f"cover_letter_angus_hunt_{self.role}_agency.docx")
+            else:
+                self.template_path = os.path.join("templates", f"cover_letter_angus_hunt_{self.role}.docx")
+
+            self.document = Document(self.template_path)
+            self.update_document()
+
+            for document_type in ['cv', 'cover_letter']:
+                self.save_document(document_type)
+
+            try:
+                self.click_quick_apply()
+                self.wait_random()
+                self.complete_application()
+
+            except TimeoutException:
+                print("No quick apply")
+
+            self.save_visited_job()
+            self.remove_temporary_files()
+
+        self.apply()
+
+
+class Interface:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Sidebar Example")
+        self.root.geometry("300x450")
+
+        self.main_frame = ttk.Frame(root)
+        self.main_frame.pack(fill=tk.BOTH, expand=True)
+
+        self.role_label = ttk.Label(self.main_frame, text="Role:")
+        self.role_label.pack(pady=5)
+        role_options = ['gis', 'developer']
+        self.role_dropdown = ttk.Combobox(self.main_frame, textvariable=tk.StringVar(), values=role_options)
+        self.role_dropdown.set(role_options[1])
+        self.role_dropdown.pack(pady=5)
+
+        self.temp_path_label = ttk.Label(self.main_frame, text="Temporary Path:")
+        self.temp_path_label.pack(pady=5)
+        self.temp_path_var = tk.StringVar()
+        self.temp_path_entry = ttk.Entry(self.main_frame, textvariable=self.temp_path_var, state='readonly')
+        self.temp_path_entry.pack(pady=5, padx=5, fill=tk.X)
+        self.browse_button = ttk.Button(self.main_frame, text="Browse", command=self.browse_temp_path)
+        self.browse_button.pack(pady=5)
+
+        self.where_label = ttk.Label(self.main_frame, text="Where:")
+        self.where_label.pack(pady=5)
+        self.where_entry = ttk.Entry(self.main_frame)
+        self.where_entry.pack(pady=5)
+
+        self.keywords_label = ttk.Label(self.main_frame, text="Keywords:")
+        self.keywords_label.pack(pady=5)
+        self.keywords_entry = ttk.Entry(self.main_frame)
+        self.keywords_entry.pack(pady=5)
+
+        self.run_button = ttk.Button(self.main_frame, text="Run", command=self.run_action)
+        self.run_button.pack(pady=10)
+
+        self.skip_button = ttk.Button(self.main_frame, text="Skip current listing", command=self.skip_action, state=DISABLED)
+        self.skip_button.pack(pady=10)
+
+        self.messages_label = ttk.Label(self.main_frame, text="")
+        self.messages_label.pack(pady=5)
         
-            self.read_visited_jobs()
-        
-            if len(listings_array) == 0:
-                print("Reached end of listings")
-                break
-        
-            for listing in listings_array:
-                self.temporary_documents = []
-                is_agency = False
-                self.company_name = listing.get("companyName")
-        
-                if self.company_name is None:
-                    is_agency = True
-                    self.company_name = listing.get("advertiser").get('description')
-        
-                self.job_title = listing.get("title")
-                self.location = listing.get("location")
-                self.job_id = listing.get('solMetadata').get('jobId')
-                self.job_url = r"https://www.seek.co.nz/job/" + self.job_id
-        
-                self.data_dict = {
-                    "job_title": self.job_title,
-                    "company_name": self.company_name,
-                    "location": self.location,
-                    "url": self.job_url,
-                    "applied": False
-                }
-        
-                if self.job_id in self.visited_jobs.keys():
-                    print("Already applied")
-                    pass
-        
-                else:
-                    self.driver.get(self.job_url)
-                    print(f"Got {self.job_url}")
+        self.seeker = None
 
-                    self.replacements = {
-                        "COMPANY_NAME": self.company_name,
-                        "JOB_TITLE": self.job_title,
-                        "LOCATION_NAME": self.location
-                    }
+    def browse_temp_path(self):
+        temp_path = filedialog.askdirectory(title="Select Temporary Folder")
+        self.temp_path_var.set(temp_path)
 
-                    self.job_details = self.driver.find_element(By.CSS_SELECTOR, 'div[data-automation="jobAdDetails"]').text
+    @staticmethod
+    def return_clean_url_args(url_args):
+        return url_args.replace(' ', '+')
 
-                    if self.role == "chat_gpt_test":
-                        self.query_chat_gpt()
+    def skip_action(self):
+        print(f"Skipping {self.seeker.job_title}")
+        try:
+            self.seeker.remove_temporary_files()
+        except:
+            print("Couldn't remove temporary files")
+        threading.Thread(target=self.seeker.apply).start()
 
-                    if is_agency:
-                        self.template_path = os.path.join("templates", f"cover_letter_angus_hunt_{self.role}_agency.docx")
-                    else:
-                        self.template_path = os.path.join("templates", f"cover_letter_angus_hunt_{self.role}.docx")
+    def run_action(self):
+        self.messages_label.config(text="Loading Seeker logic...")
+        time.sleep(3)
+        if self.seeker is not None:
+            self.seeker.driver.quit()
 
-                    self.document = Document(self.template_path)
-                    self.update_document()
-
-                    for document_type in ['cv', 'cover_letter']:
-                        self.save_document(document_type)
-
-                    try:
-                        self.click_quick_apply()
-                    except TimeoutException:
-                        print("No quick apply")
-                        self.save_visited_job()
-                        self.remove_temporary_files()
-                        break
-
-                    self.wait_random()
-                    if EC.presence_of_element_located((By.ID, 'password')):
-                        try:
-                            self.log_in()
-                        except:
-                            print("Automatic log-in failed; please enter login details manually")
-
-                    pyperclip.copy(self.temp_path)
-
-                    print("Please complete application. This browser will expire in 5 mins.")
-
-                    try:
-                        WebDriverWait(self.driver, 300).until(
-                            EC.presence_of_element_located((By.ID, 'applicationSent'))
-                        )
-                        print(f"Application for {self.job_title} sent successfully.")
-                        self.data_dict["applied"] = True
-
-                    except NoSuchWindowException:
-                        print("Reopening closed browser")
-                        self.driver = webdriver.Chrome(service=ChromeService(), options=webdriver.ChromeOptions())
-        
-                    self.save_visited_job()
-                    try:
-                        self.remove_temporary_files()
-                    except Exception as e:
-                        print(f"Couldn't remove temporary files: {e}")
+        self.seeker = Seeker(
+            role=self.role_dropdown.get(),
+            temp_path=self.return_clean_url_args(self.temp_path_var.get()),
+            where=self.return_clean_url_args(self.where_entry.get()),
+            keywords=self.return_clean_url_args(self.keywords_entry.get())
+        )
+        self.seeker.load_pages(max_pages=2)
+        self.skip_button['state'] = NORMAL
+        self.messages_label.config(text="Running browser...")
+        threading.Thread(target=self.seeker.apply).start()
 
 
-seeker = Seeker(
-    role="developer",
-    temp_path=r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary",
-    where="All+Australia",
-    keywords="Python+Developer"
-)
-seeker.execute()
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = Interface(root)
+    app.role_dropdown.set('developer')
+    app.temp_path_var.set(r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary")
+    app.where_entry.insert(0, "All Australia")
+    app.keywords_entry.insert(0, "Python Developer")
+    app.root.mainloop()
+
+# seeker = Seeker(
+#     role="developer",
+#     temp_path=r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary",
+#     where="All+Australia",
+#     keywords="Python+Developer"
+# )
+# seeker.execute()
 print("Complete")
