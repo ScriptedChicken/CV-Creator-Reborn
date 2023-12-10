@@ -250,5 +250,47 @@
         "location": "Sydney",
         "url": "https://www.seek.co.nz/job/72019324",
         "applied": false
+    },
+    "72045448": {
+        "job_title": "Software Engineer",
+        "company_name": "NetApp",
+        "location": "Canberra",
+        "url": "https://www.seek.co.nz/job/72045448",
+        "applied": true
+    },
+    "72072787": {
+        "job_title": "Research Software Developer",
+        "company_name": "Australian Institute of Marine Science",
+        "location": "Northern QLD",
+        "url": "https://www.seek.co.nz/job/72072787",
+        "applied": false
+    },
+    "72072786": {
+        "job_title": "Research Software Developer",
+        "company_name": "Australian Institute of Marine Science",
+        "location": "Northern QLD",
+        "url": "https://www.seek.co.nz/job/72072786",
+        "applied": false
+    },
+    "72081124": {
+        "job_title": "Software Developer",
+        "company_name": "Sunshine Coast Hospital and Health Service",
+        "location": "Sunshine Coast",
+        "url": "https://www.seek.co.nz/job/72081124",
+        "applied": false
+    },
+    "71564326": {
+        "job_title": "Digital Marketing Specialist",
+        "company_name": "Branch Furniture Pty Ltd",
+        "location": "Coffs Harbour & North Coast",
+        "url": "https://www.seek.co.nz/job/71564326",
+        "applied": false
+    },
+    "71586884": {
+        "job_title": "Partner Loyalty Program Manager - Hybrid",
+        "company_name": "SEEK",
+        "location": "Melbourne",
+        "url": "https://www.seek.co.nz/job/71586884",
+        "applied": false
     }
 }

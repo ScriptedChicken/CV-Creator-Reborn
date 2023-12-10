@@ -131,7 +131,10 @@ class Seeker(object):
 
     def remove_temporary_files(self):
         for temporary_document in self.temporary_documents:
-            os.remove(temporary_document)
+            try:
+                os.remove(temporary_document)
+            except:
+                print(f"Couldn't remove {temporary_document}")
         
     def query_chat_gpt(self):
         self.replacements["CHAT_GPT_RESPONSE"] = self.return_chat_gpt_response(self.job_details)
@@ -281,18 +284,22 @@ class Interface(Seeker):
         self.keywords_entry = ttk.Entry(self.main_frame)
         self.keywords_entry.grid(row=3, column=2, columnspan=2, pady=5, padx=5, sticky='W')
 
+        self.view_previous_jobs_check = ttk.Checkbutton(self.main_frame, text='View previously-skipped jobs', variable=tk.StringVar(), onvalue=True, offvalue=False)
+        self.view_previous_jobs_check.grid(row=4, column=0, columnspan=4, pady=5)
+        self.view_previous_jobs_check.invoke()
+
         self.run_button = ttk.Button(self.main_frame, text="Run", command=self.run_action)
-        self.run_button.grid(row=4, column=1, columnspan=2, pady=5)
+        self.run_button.grid(row=5, column=1, columnspan=2, pady=5)
 
         self.skip_button = ttk.Button(self.main_frame, text="Skip current listing", command=self.skip_action, state=DISABLED)
-        self.skip_button.grid(row=5, column=1, columnspan=2, pady=5)
+        self.skip_button.grid(row=6, column=1, columnspan=2, pady=5)
 
         self.quit_button = ttk.Button(self.main_frame, text="Quit", command=self.quit_action)
-        self.quit_button.grid(row=6, column=1, columnspan=2, pady=5)
+        self.quit_button.grid(row=7, column=1, columnspan=2, pady=5)
 
         self.messages_label = ttk.Label(self.main_frame, text="", wraplength=240, justify='center')
         self.messages_label.configure(anchor="center")
-        self.messages_label.grid(row=7, column=1, columnspan=2, pady=5)
+        self.messages_label.grid(row=8, column=1, columnspan=2, pady=5)
 
         self.temp_path_output = None
         self.thread = None
@@ -308,16 +315,12 @@ class Interface(Seeker):
 
     def skip_action(self):
         print(f"Skipping {self.job_title}")
-        try:
-            self.remove_temporary_files()
-        except:
-            print("Couldn't remove temporary files")
+        self.remove_temporary_files()
         threading.Thread(target=self.apply).start()
 
     def quit_action(self):
-        self.remove_temporary_files()
         self.driver.quit()
-        self.root.destroy()
+        self.remove_temporary_files()
         sys.exit()
 
     def run_action(self):
