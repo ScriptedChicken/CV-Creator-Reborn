@@ -222,5 +222,33 @@
         "location": "Canberra",
         "url": "https://www.seek.co.nz/job/71506709",
         "applied": false
+    },
+    "72050124": {
+        "job_title": "Front End Developer",
+        "company_name": "Spark New Zealand",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/72050124",
+        "applied": false
+    },
+    "71938677": {
+        "job_title": "Microsoft BI Developer - Australian Citizen (NV1)",
+        "company_name": "DWS",
+        "location": "Canberra",
+        "url": "https://www.seek.co.nz/job/71938677",
+        "applied": false
+    },
+    "72104043": {
+        "job_title": "Senior Technical Lead (SQL Developer)",
+        "company_name": "Luxoft Financial Services UK Limited (Australia Branch)",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/72104043",
+        "applied": false
+    },
+    "72019324": {
+        "job_title": "Database Developer",
+        "company_name": "Halcyon Knights",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/72019324",
+        "applied": false
     }
 }

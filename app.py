@@ -1,5 +1,6 @@
 import requests
 import os
+import sys
 from docx import Document
 import shutil
 import time
@@ -27,7 +28,9 @@ class Seeker(object):
         self.driver = None
         self.role = role
         self.temp_path = temp_path
-        self.base_url = r"https://www.seek.co.nz/api/chalice-search/v4/search?siteKey=NZ-Main&where=" + where + "&keywords=" + keywords
+        self.where = where
+        self.keywords = keywords
+        self.base_url = None
         self.output_folder = "outputs"
         self.job_title = None
         self.location = None
@@ -140,7 +143,8 @@ class Seeker(object):
         quick_apply_button.click()
 
     def load_pages(self, max_pages=1):
-        for page_num in range(0, max_pages):
+        self.base_url = r"https://www.seek.co.nz/api/chalice-search/v4/search?siteKey=NZ-Main&where=" + self.where + "&keywords=" + self.keywords
+        for page_num in range(1, max_pages):
             self.wait_random()
             url = self.base_url + f"&page={page_num}"
             res = requests.get(url)
@@ -178,6 +182,7 @@ class Seeker(object):
             listing = next(self.listings_iterator)
         except StopIteration:
             print("Completed all listings")
+            self.driver.quit()
             return
 
         self.read_visited_jobs()
@@ -203,7 +208,8 @@ class Seeker(object):
         }
 
         if self.job_id in self.visited_jobs.keys():
-            print("Already applied")
+            if self.visited_jobs[self.job_id]['applied'] is True:
+                print("Already applied")
 
         else:
             self.driver.get(self.job_url)
@@ -245,99 +251,99 @@ class Seeker(object):
         self.apply()
 
 
-class Interface:
+class Interface(Seeker):
     def __init__(self, root):
         self.root = root
-        self.root.title("Sidebar Example")
-        self.root.geometry("300x450")
+        self.root.title("Seeker")
 
         self.main_frame = ttk.Frame(root)
-        self.main_frame.pack(fill=tk.BOTH, expand=True)
+        self.main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
 
         self.role_label = ttk.Label(self.main_frame, text="Role:")
-        self.role_label.pack(pady=5)
+        self.role_label.grid(row=0, column=0, columnspan=2, pady=5, padx=5, sticky='E')
         role_options = ['gis', 'developer']
         self.role_dropdown = ttk.Combobox(self.main_frame, textvariable=tk.StringVar(), values=role_options)
         self.role_dropdown.set(role_options[1])
-        self.role_dropdown.pack(pady=5)
+        self.role_dropdown.grid(row=0, column=2, columnspan=2, pady=5, padx=5, sticky='W')
 
         self.temp_path_label = ttk.Label(self.main_frame, text="Temporary Path:")
-        self.temp_path_label.pack(pady=5)
-        self.temp_path_var = tk.StringVar()
-        self.temp_path_entry = ttk.Entry(self.main_frame, textvariable=self.temp_path_var, state='readonly')
-        self.temp_path_entry.pack(pady=5, padx=5, fill=tk.X)
+        self.temp_path_label.grid(row=1, column=0, columnspan=2, pady=5, padx=5, sticky='E')
         self.browse_button = ttk.Button(self.main_frame, text="Browse", command=self.browse_temp_path)
-        self.browse_button.pack(pady=5)
+        self.browse_button.grid(row=1, column=2, columnspan=2, pady=5, padx=5, sticky='W')
 
         self.where_label = ttk.Label(self.main_frame, text="Where:")
-        self.where_label.pack(pady=5)
+        self.where_label.grid(row=2, column=0, columnspan=2, pady=5, padx=5, sticky='E')
         self.where_entry = ttk.Entry(self.main_frame)
-        self.where_entry.pack(pady=5)
+        self.where_entry.grid(row=2, column=2, columnspan=2, pady=5, padx=5, sticky='W')
 
         self.keywords_label = ttk.Label(self.main_frame, text="Keywords:")
-        self.keywords_label.pack(pady=5)
+        self.keywords_label.grid(row=3, column=0, columnspan=2, pady=5, padx=5, sticky='E')
         self.keywords_entry = ttk.Entry(self.main_frame)
-        self.keywords_entry.pack(pady=5)
+        self.keywords_entry.grid(row=3, column=2, columnspan=2, pady=5, padx=5, sticky='W')
 
         self.run_button = ttk.Button(self.main_frame, text="Run", command=self.run_action)
-        self.run_button.pack(pady=10)
+        self.run_button.grid(row=4, column=1, columnspan=2, pady=5)
 
         self.skip_button = ttk.Button(self.main_frame, text="Skip current listing", command=self.skip_action, state=DISABLED)
-        self.skip_button.pack(pady=10)
+        self.skip_button.grid(row=5, column=1, columnspan=2, pady=5)
 
-        self.messages_label = ttk.Label(self.main_frame, text="")
-        self.messages_label.pack(pady=5)
-        
-        self.seeker = None
+        self.quit_button = ttk.Button(self.main_frame, text="Quit", command=self.quit_action)
+        self.quit_button.grid(row=6, column=1, columnspan=2, pady=5)
+
+        self.messages_label = ttk.Label(self.main_frame, text="", wraplength=240, justify='center')
+        self.messages_label.configure(anchor="center")
+        self.messages_label.grid(row=7, column=1, columnspan=2, pady=5)
+
+        self.temp_path_output = None
+        self.thread = None
 
     def browse_temp_path(self):
         temp_path = filedialog.askdirectory(title="Select Temporary Folder")
-        self.temp_path_var.set(temp_path)
+        self.temp_path_output = temp_path
+        self.messages_label.config(text=f"Set temporary path to {temp_path}")
 
     @staticmethod
     def return_clean_url_args(url_args):
         return url_args.replace(' ', '+')
 
     def skip_action(self):
-        print(f"Skipping {self.seeker.job_title}")
+        print(f"Skipping {self.job_title}")
         try:
-            self.seeker.remove_temporary_files()
+            self.remove_temporary_files()
         except:
             print("Couldn't remove temporary files")
-        threading.Thread(target=self.seeker.apply).start()
+        threading.Thread(target=self.apply).start()
+
+    def quit_action(self):
+        self.remove_temporary_files()
+        self.driver.quit()
+        self.root.destroy()
+        sys.exit()
 
     def run_action(self):
-        self.messages_label.config(text="Loading Seeker logic...")
-        time.sleep(3)
-        if self.seeker is not None:
-            self.seeker.driver.quit()
+        self.role = self.role_dropdown.get()
+        self.temp_path = self.temp_path_output
+        self.where = self.return_clean_url_args(self.where_entry.get())
+        self.keywords = self.return_clean_url_args(self.keywords_entry.get())
+        super().__init__(self.role, self.temp_path, self.where, self.keywords)
 
-        self.seeker = Seeker(
-            role=self.role_dropdown.get(),
-            temp_path=self.return_clean_url_args(self.temp_path_var.get()),
-            where=self.return_clean_url_args(self.where_entry.get()),
-            keywords=self.return_clean_url_args(self.keywords_entry.get())
-        )
-        self.seeker.load_pages(max_pages=2)
+        self.load_pages(max_pages=2)
         self.skip_button['state'] = NORMAL
         self.messages_label.config(text="Running browser...")
-        threading.Thread(target=self.seeker.apply).start()
+        self.thread = threading.Thread(target=self.apply)
+        self.thread.daemon = True
+        self.thread.start()
 
 
 if __name__ == "__main__":
     root = tk.Tk()
     app = Interface(root)
     app.role_dropdown.set('developer')
-    app.temp_path_var.set(r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary")
+    app.temp_path_output = r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary"
     app.where_entry.insert(0, "All Australia")
     app.keywords_entry.insert(0, "Python Developer")
+    test_path = r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary"
+    app.messages_label.config(text=f'Set temporary path to {test_path}')
     app.root.mainloop()
 
-# seeker = Seeker(
-#     role="developer",
-#     temp_path=r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary",
-#     where="All+Australia",
-#     keywords="Python+Developer"
-# )
-# seeker.execute()
 print("Complete")
