@@ -109,7 +109,7 @@
         "company_name": "Noventus",
         "location": "Sydney",
         "url": "https://www.seek.co.nz/job/71690802",
-        "applied": true
+        "applied": false
     },
     "71467808": {
         "job_title": "Python Developer",
@@ -291,6 +291,55 @@
         "company_name": "SEEK",
         "location": "Melbourne",
         "url": "https://www.seek.co.nz/job/71586884",
+        "applied": false
+    },
+    "72137767": {
+        "job_title": "Staff ML Engineer",
+        "company_name": "Xero",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/72137767",
+        "applied": false
+    },
+    "72124318": {
+        "job_title": "Python Developer - Data Pipelines",
+        "company_name": "Morgan McKinley",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/72124318",
+        "applied": false
+    },
+    "72133130": {
+        "job_title": "Senior Software Developer - Power Apps, .NET, Python",
+        "company_name": "Rondo Building Services",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/72133130",
+        "applied": false
+    },
+    "72140966": {
+        "job_title": "Senior Software Engineer",
+        "company_name": "Robert Walters",
+        "location": "Sydney",
+        "url": "https://www.seek.co.nz/job/72140966",
+        "applied": false
+    },
+    "72114284": {
+        "job_title": "Senior Python Developer - Federal Government",
+        "company_name": "Talent International",
+        "location": "Melbourne",
+        "url": "https://www.seek.co.nz/job/72114284",
+        "applied": false
+    },
+    "72108920": {
+        "job_title": "Machine Learning Engineer",
+        "company_name": "Aurec Group",
+        "location": "Melbourne",
+        "url": "https://www.seek.co.nz/job/72108920",
+        "applied": false
+    },
+    "72117648": {
+        "job_title": "Software Engineer",
+        "company_name": "Athena Artificial Intelligence",
+        "location": "Brisbane",
+        "url": "https://www.seek.co.nz/job/72117648",
         "applied": false
     }
 }

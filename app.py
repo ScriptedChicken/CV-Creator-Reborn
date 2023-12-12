@@ -17,6 +17,7 @@ from openai import OpenAI
 import tkinter as tk
 from tkinter import ttk, filedialog, NORMAL, DISABLED
 import threading
+from urllib3.exceptions import MaxRetryError
 
 
 class QuickApplyException(Exception):
@@ -24,12 +25,13 @@ class QuickApplyException(Exception):
 
 
 class Seeker(object):
-    def __init__(self, role, temp_path, where, keywords):
+    def __init__(self, role, temp_path, where, keywords, view_previous_jobs):
         self.driver = None
         self.role = role
         self.temp_path = temp_path
         self.where = where
         self.keywords = keywords
+        self.view_previous_jobs = view_previous_jobs
         self.base_url = None
         self.output_folder = "outputs"
         self.job_title = None
@@ -99,6 +101,7 @@ class Seeker(object):
         self.visited_jobs[self.job_id] = self.data_dict
         with open('visited_jobs.json', 'w') as file:
             json.dump(self.visited_jobs, file, indent=4)
+            print("Saved")
     
     def return_chat_gpt_response(self, job_description):
         client = OpenAI(api_key=self.secrets["chat_gpt_login"]["key"])
@@ -128,6 +131,10 @@ class Seeker(object):
                                 runs[i].text = text
                     except TypeError:
                         pass
+
+                # backup
+                if key in paragraph.text:
+                    paragraph.text = paragraph.text.replace(key, value)
 
     def remove_temporary_files(self):
         for temporary_document in self.temporary_documents:
@@ -177,6 +184,9 @@ class Seeker(object):
             print("Reopening closed browser")
             self.driver = webdriver.Chrome(service=ChromeService(), options=webdriver.ChromeOptions())
 
+        except MaxRetryError:
+            print("Too many retries, skipping")
+
     def apply(self):
         if self.driver is None:
             self.driver = webdriver.Chrome(service=ChromeService(), options=webdriver.ChromeOptions())
@@ -210,7 +220,7 @@ class Seeker(object):
             "applied": False
         }
 
-        if self.job_id in self.visited_jobs.keys():
+        if (self.job_id in self.visited_jobs.keys()) and (self.view_previous_jobs is True):
             if self.visited_jobs[self.job_id]['applied'] is True:
                 print("Already applied")
 
@@ -229,15 +239,17 @@ class Seeker(object):
             if self.role == "chat_gpt_test":
                 self.query_chat_gpt()
 
-            if is_agency:
-                self.template_path = os.path.join("templates", f"cover_letter_angus_hunt_{self.role}_agency.docx")
-            else:
-                self.template_path = os.path.join("templates", f"cover_letter_angus_hunt_{self.role}.docx")
-
-            self.document = Document(self.template_path)
-            self.update_document()
-
             for document_type in ['cv', 'cover_letter']:
+                if is_agency:
+                    self.template_path = os.path.join("templates", f"{document_type}_angus_hunt_{self.role}_agency.docx")
+                else:
+                    self.template_path = os.path.join("templates", f"{document_type}_angus_hunt_{self.role}.docx")
+
+                self.document = Document(self.template_path)
+
+                if document_type == 'cover_letter':
+                    self.update_document()
+
                 self.save_document(document_type)
 
             try:
@@ -248,9 +260,8 @@ class Seeker(object):
             except TimeoutException:
                 print("No quick apply")
 
-            self.save_visited_job()
             self.remove_temporary_files()
-
+            self.save_visited_job()
         self.apply()
 
 
@@ -317,6 +328,7 @@ class Interface(Seeker):
 
     def skip_action(self):
         print(f"Skipping {self.job_title}")
+        self.save_visited_job()
         self.remove_temporary_files()
         threading.Thread(target=self.apply).start()
 
@@ -331,7 +343,7 @@ class Interface(Seeker):
         self.temp_path = self.temp_path_output
         self.where = self.return_clean_url_args(self.where_entry.get())
         self.keywords = self.return_clean_url_args(self.keywords_entry.get())
-        super().__init__(self.role, self.temp_path, self.where, self.keywords)
+        super().__init__(self.role, self.temp_path, self.where, self.keywords, self.view_previous_jobs_check)
 
         self.load_pages(max_pages=2)
         self.skip_button['state'] = NORMAL
