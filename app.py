@@ -188,7 +188,10 @@ class Seeker(object):
             print("Too many retries, skipping")
 
     def apply(self):
-        if self.driver is None:
+        if (self.driver is not None) and (self.driver.service.process is not None):
+            print("User closed driver")
+            return
+        elif self.driver is None:
             self.driver = webdriver.Chrome(service=ChromeService(), options=webdriver.ChromeOptions())
 
         try:
@@ -262,7 +265,6 @@ class Seeker(object):
 
             self.remove_temporary_files()
             self.save_visited_job()
-        self.apply()
 
 
 class Interface(Seeker):
@@ -358,7 +360,7 @@ if __name__ == "__main__":
     app = Interface(root)
     app.role_dropdown.set('developer')
     app.temp_path_output = r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary"
-    app.where_entry.insert(0, "All Australia")
+    app.where_entry.insert(0, "All New Zealand")
     app.keywords_entry.insert(0, "Python Developer")
     test_path = r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary"
     app.messages_label.config(text=f'Set temporary path to {test_path}')

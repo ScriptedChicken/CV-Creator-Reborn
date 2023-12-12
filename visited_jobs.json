@@ -341,5 +341,89 @@
         "location": "Brisbane",
         "url": "https://www.seek.co.nz/job/72117648",
         "applied": false
+    },
+    "72136420": {
+        "job_title": "Software Developer - Full Stack",
+        "company_name": "Sandfield Associates",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/72136420",
+        "applied": false
+    },
+    "71979189": {
+        "job_title": "Software Developer",
+        "company_name": "Crew Technology Recruitment",
+        "location": "Canterbury",
+        "url": "https://www.seek.co.nz/job/71979189",
+        "applied": false
+    },
+    "72108377": {
+        "job_title": "AWS Integration Developer - Java / Python",
+        "company_name": "Comspek International",
+        "location": "Canterbury",
+        "url": "https://www.seek.co.nz/job/72108377",
+        "applied": false
+    },
+    "72108365": {
+        "job_title": "AWS Integration Developer - Java / Python",
+        "company_name": "Comspek International",
+        "location": "Wellington",
+        "url": "https://www.seek.co.nz/job/72108365",
+        "applied": false
+    },
+    "71696473": {
+        "job_title": "Machine Learning Engineer",
+        "company_name": "Tribe Recruitment",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/71696473",
+        "applied": false
+    },
+    "71843707": {
+        "job_title": "Machine Learning Engineer",
+        "company_name": "Scentian Bio",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/71843707",
+        "applied": false
+    },
+    "71972874": {
+        "job_title": "Data Engineer",
+        "company_name": "Vector",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/71972874",
+        "applied": false
+    },
+    "71527518": {
+        "job_title": "Senior Python Developer",
+        "company_name": "Robert Half",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/71527518",
+        "applied": false
+    },
+    "72108350": {
+        "job_title": "AWS Integration Developer - Java / Python",
+        "company_name": "Comspek International",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/72108350",
+        "applied": false
+    },
+    "71818254": {
+        "job_title": "Software Developer",
+        "company_name": "Kordia",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/71818254",
+        "applied": true
+    },
+    "71826254": {
+        "job_title": "Software Engineer",
+        "company_name": "Trimble Inc",
+        "location": "Canterbury",
+        "url": "https://www.seek.co.nz/job/71826254",
+        "applied": true
+    },
+    "71904968": {
+        "job_title": "Data Engineer",
+        "company_name": "Tribe Recruitment",
+        "location": "Wellington",
+        "url": "https://www.seek.co.nz/job/71904968",
+        "applied": true
     }
 }
