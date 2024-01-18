@@ -20,10 +20,6 @@ import threading
 from urllib3.exceptions import MaxRetryError
 
 
-class QuickApplyException(Exception):
-    pass
-
-
 class Seeker(object):
     def __init__(self, role, temp_path, where, keywords, view_previous_jobs):
         self.driver = None
