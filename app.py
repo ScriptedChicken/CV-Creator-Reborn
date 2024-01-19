@@ -21,10 +21,9 @@ import threading
 
 
 class Seeker(object):
-    def __init__(self, name, role, temp_path_dict, where, keywords, view_previous_jobs):
+    def __init__(self, name, temp_path_dict, where, keywords, view_previous_jobs):
         self.name = name
         self.driver = None
-        self.role = role
         self.temp_path_dict = temp_path_dict
         self.where = where
         self.keywords = keywords
@@ -293,13 +292,6 @@ class Interface(Seeker):
         self.name_entry = ttk.Entry(self.main_frame)
         self.name_entry.grid(row=0, column=2, columnspan=2, pady=5, padx=5, sticky='W')
 
-        self.role_label = ttk.Label(self.main_frame, text="Role:")
-        self.role_label.grid(row=1, column=0, columnspan=2, pady=5, padx=5, sticky='E')
-        role_options = ['gis', 'developer', 'retail assistant']
-        self.role_dropdown = ttk.Combobox(self.main_frame, textvariable=tk.StringVar(), values=role_options)
-        self.role_dropdown.set(role_options[1])
-        self.role_dropdown.grid(row=1, column=2, columnspan=2, pady=5, padx=5, sticky='W')
-
         self.cv_template_label = ttk.Label(self.main_frame, text="CV Template:")
         self.cv_template_label.grid(row=2, column=0, columnspan=2, pady=5, padx=5, sticky='E')
         self.cv_template_button = ttk.Button(self.main_frame, text="Browse", command= lambda: self.browse_temp_path('cv'))
@@ -310,7 +302,7 @@ class Interface(Seeker):
         self.cover_letter_template_button = ttk.Button(self.main_frame, text="Browse", command= lambda: self.browse_temp_path('cover_letter'))
         self.cover_letter_template_button.grid(row=3, column=2, columnspan=2, pady=5, padx=5, sticky='W')
 
-        self.where_label = ttk.Label(self.main_frame, text="Where:")
+        self.where_label = ttk.Label(self.main_frame, text="Location:")
         self.where_label.grid(row=4, column=0, columnspan=2, pady=5, padx=5, sticky='E')
         self.where_entry = ttk.Entry(self.main_frame)
         self.where_entry.grid(row=4, column=2, columnspan=2, pady=5, padx=5, sticky='W')
@@ -382,11 +374,10 @@ class Interface(Seeker):
         self.check_state()
         self.run_button['state'] = 'disabled'
         self.name = self.return_clean_text_input(self.name_entry.get())
-        self.role = self.return_clean_text_input(self.role_dropdown.get())
         self.temp_path = self.temp_path_output
         self.where = self.return_clean_url_args(self.where_entry.get())
         self.keywords = self.return_clean_url_args(self.keywords_entry.get())
-        super().__init__(self.name, self.role, self.temp_path_dict, self.where, self.keywords, self.view_previous_jobs_check)
+        super().__init__(self.name, self.temp_path_dict, self.where, self.keywords, self.view_previous_jobs_check)
 
         self.load_pages(max_pages=2)
         self.skip_button['state'] = NORMAL
@@ -397,16 +388,16 @@ class Interface(Seeker):
 if __name__ == "__main__":
     root = tk.Tk()
     app = Interface(root)
-    app.name_entry.insert(0, "Juan Carlos")
-    app.role_dropdown.set('retail assistant')
-    app.temp_path_dict = {
-        "cv": r"templates/cv_juan_carlos.docx",
-        "cover_letter": r"templates/cover_letter_juan_carlos.docx"
-    }
-    app.where_entry.insert(0, "All New Zealand")
-    app.keywords_entry.insert(0, "Customer service")
-    test_path = r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary"
-    app.messages_label.config(text=f'Set temporary path to {test_path}')
+    # app.name_entry.insert(0, "Juan Carlos")
+    # app.role_dropdown.set('retail assistant')
+    # app.temp_path_dict = {
+    #     "cv": r"templates/cv_juan_carlos.docx",
+    #     "cover_letter": r"templates/cover_letter_juan_carlos.docx"
+    # }
+    # app.where_entry.insert(0, "All New Zealand")
+    # app.keywords_entry.insert(0, "Customer service")
+    # test_path = r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary"
+    # app.messages_label.config(text=f'Set temporary path to {test_path}')
     app.root.mainloop()
 
 print("Complete")
