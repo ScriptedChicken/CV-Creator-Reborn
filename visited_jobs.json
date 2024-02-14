@@ -1,429 +1,149 @@
 {
-    "72082298": {
-        "job_title": "Python Developer (s)",
-        "company_name": "Recruitment Hive",
-        "location": "Melbourne",
-        "url": "https://www.seek.co.nz/job/72082298",
-        "applied": false
-    },
-    "72049427": {
-        "job_title": "Contract position - Python",
-        "company_name": "Halcyon Knights",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/72049427",
-        "applied": false
-    },
-    "72023223": {
-        "job_title": "Senior E-commerce Python Developer",
-        "company_name": "Outback Equipment",
-        "location": "Brisbane",
-        "url": "https://www.seek.co.nz/job/72023223",
-        "applied": false
-    },
-    "71982147": {
-        "job_title": "Senior Software Engineer - Python",
-        "company_name": "Lookahead",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/71982147",
-        "applied": false
-    },
-    "71467693": {
-        "job_title": "Python Developer",
-        "company_name": "Aurec Group",
-        "location": "Canberra",
-        "url": "https://www.seek.co.nz/job/71467693",
-        "applied": false
-    },
-    "71568851": {
-        "job_title": "Backend Python Developer",
-        "company_name": "Talent International",
-        "location": "Brisbane",
-        "url": "https://www.seek.co.nz/job/71568851",
-        "applied": false
-    },
-    "71821782": {
-        "job_title": "Python Developer",
-        "company_name": "Healius",
-        "location": "Brisbane",
-        "url": "https://www.seek.co.nz/job/71821782",
-        "applied": false
-    },
-    "72070972": {
-        "job_title": "Data Engineer",
-        "company_name": "University of Tasmania",
-        "location": "Hobart",
-        "url": "https://www.seek.co.nz/job/72070972",
-        "applied": false
-    },
-    "71760814": {
-        "job_title": "PYTHON DEVELOPER",
-        "company_name": "Spark Recruitment",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/71760814",
-        "applied": false
-    },
-    "71759839": {
-        "job_title": "Python Developer",
-        "company_name": "SYPAQ Systems",
-        "location": "Melbourne",
-        "url": "https://www.seek.co.nz/job/71759839",
-        "applied": false
-    },
-    "71976549": {
-        "job_title": "Senior Software Engineer (Python)",
-        "company_name": "PCCW Global",
-        "location": "Brisbane",
-        "url": "https://www.seek.co.nz/job/71976549",
-        "applied": false
-    },
-    "71857793": {
-        "job_title": "Senior Backend Engineer - Python | Django | Web API",
-        "company_name": "Genesis Recruitment Solutions",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/71857793",
-        "applied": false
-    },
-    "71703496": {
-        "job_title": "Python & SQL Developer",
-        "company_name": "Recruitment Hive",
-        "location": "Melbourne",
-        "url": "https://www.seek.co.nz/job/71703496",
-        "applied": false
-    },
-    "71883044": {
-        "job_title": "Senior Backend Engineer - Python | Web API | Microservices",
-        "company_name": "Genesis Recruitment Solutions",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/71883044",
-        "applied": false
-    },
-    "72094894": {
-        "job_title": "ML Engineer",
-        "company_name": "TheDriveGroup",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/72094894",
-        "applied": false
-    },
-    "71690802": {
-        "job_title": "Python & SQL Developer",
-        "company_name": "Noventus",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/71690802",
-        "applied": false
-    },
-    "71467808": {
-        "job_title": "Python Developer",
-        "company_name": "Aurec Group",
-        "location": "Adelaide",
-        "url": "https://www.seek.co.nz/job/71467808",
-        "applied": false
-    },
-    "71635098": {
-        "job_title": "Python Developer - Security Clearance",
-        "company_name": "Morgan Consulting",
-        "location": "Melbourne",
-        "url": "https://www.seek.co.nz/job/71635098",
-        "applied": false
-    },
-    "71796223": {
-        "job_title": "Sr Java (Core) + Python Developer, Market Making, High Frequency Trading",
-        "company_name": "Westbury Partners",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/71796223",
-        "applied": false
-    },
-    "71467752": {
-        "job_title": "Python Developer",
-        "company_name": "Aurec Group",
-        "location": "Brisbane",
-        "url": "https://www.seek.co.nz/job/71467752",
-        "applied": true
-    },
-    "71593448": {
-        "job_title": "Python Developer",
-        "company_name": "Nielsen",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/71593448",
-        "applied": false
-    },
-    "71972128": {
-        "job_title": "Software Engineer - AI, ML, Robotics & Computer Vision",
-        "company_name": "Swordfish Computing",
-        "location": "Adelaide",
-        "url": "https://www.seek.co.nz/job/71972128",
-        "applied": false
-    },
-    "71690274": {
-        "job_title": "Quantitative Python Developer Capital Markets Quant Desk",
-        "company_name": "Clarrow",
-        "location": "Melbourne",
-        "url": "https://www.seek.co.nz/job/71690274",
-        "applied": false
-    },
-    "71537142": {
-        "job_title": "Python Developer - 12 Months Contract - Sydney - $800 a day - Hybrid Remote Work",
-        "company_name": "Allura Partners",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/71537142",
-        "applied": true
-    },
-    "71524771": {
-        "job_title": "Python Developer",
-        "company_name": "Halcyon Knights",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/71524771",
-        "applied": false
-    },
-    "72055690": {
-        "job_title": "Machine Learning Engineer",
-        "company_name": "CoTalent",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/72055690",
-        "applied": false
-    },
-    "71471681": {
-        "job_title": "Python and SQL Developer",
-        "company_name": "Canberra Consulting",
-        "location": "Canberra",
-        "url": "https://www.seek.co.nz/job/71471681",
-        "applied": false
-    },
-    "71631404": {
-        "job_title": "Senior Python R&D developer / P2P and network specialist",
-        "company_name": "FIRE FRONT SOLUTIONS PTY. LTD.",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/71631404",
-        "applied": false
-    },
-    "71665354": {
-        "job_title": "Senior Python Engineer",
-        "company_name": "Paxus",
-        "location": "Melbourne",
-        "url": "https://www.seek.co.nz/job/71665354",
-        "applied": false
-    },
-    "72045390": {
-        "job_title": "Casual Software Engineer",
-        "company_name": "NetApp",
-        "location": "Canberra",
-        "url": "https://www.seek.co.nz/job/72045390",
-        "applied": false
-    },
-    "71951051": {
-        "job_title": "Software Engineer(s)",
-        "company_name": "Saab",
-        "location": "Melbourne",
-        "url": "https://www.seek.co.nz/job/71951051",
-        "applied": false
-    },
-    "71506709": {
-        "job_title": "Python Security Software Developer",
-        "company_name": "Paxus",
-        "location": "Canberra",
-        "url": "https://www.seek.co.nz/job/71506709",
-        "applied": false
-    },
-    "72050124": {
-        "job_title": "Front End Developer",
-        "company_name": "Spark New Zealand",
+    "73065371": {
+        "job_title": "Customer Service Consultant",
+        "company_name": "KiwiPlates",
         "location": "Auckland",
-        "url": "https://www.seek.co.nz/job/72050124",
+        "url": "https://www.seek.co.nz/job/73065371",
         "applied": false
     },
-    "71938677": {
-        "job_title": "Microsoft BI Developer - Australian Citizen (NV1)",
-        "company_name": "DWS",
-        "location": "Canberra",
-        "url": "https://www.seek.co.nz/job/71938677",
-        "applied": false
-    },
-    "72104043": {
-        "job_title": "Senior Technical Lead (SQL Developer)",
-        "company_name": "Luxoft Financial Services UK Limited (Australia Branch)",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/72104043",
-        "applied": false
-    },
-    "72019324": {
-        "job_title": "Database Developer",
-        "company_name": "Halcyon Knights",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/72019324",
-        "applied": false
-    },
-    "72045448": {
-        "job_title": "Software Engineer",
-        "company_name": "NetApp",
-        "location": "Canberra",
-        "url": "https://www.seek.co.nz/job/72045448",
-        "applied": true
-    },
-    "72072787": {
-        "job_title": "Research Software Developer",
-        "company_name": "Australian Institute of Marine Science",
-        "location": "Northern QLD",
-        "url": "https://www.seek.co.nz/job/72072787",
-        "applied": false
-    },
-    "72072786": {
-        "job_title": "Research Software Developer",
-        "company_name": "Australian Institute of Marine Science",
-        "location": "Northern QLD",
-        "url": "https://www.seek.co.nz/job/72072786",
-        "applied": false
-    },
-    "72081124": {
-        "job_title": "Software Developer",
-        "company_name": "Sunshine Coast Hospital and Health Service",
-        "location": "Sunshine Coast",
-        "url": "https://www.seek.co.nz/job/72081124",
-        "applied": false
-    },
-    "71564326": {
-        "job_title": "Digital Marketing Specialist",
-        "company_name": "Branch Furniture Pty Ltd",
-        "location": "Coffs Harbour & North Coast",
-        "url": "https://www.seek.co.nz/job/71564326",
-        "applied": false
-    },
-    "71586884": {
-        "job_title": "Partner Loyalty Program Manager - Hybrid",
-        "company_name": "SEEK",
-        "location": "Melbourne",
-        "url": "https://www.seek.co.nz/job/71586884",
-        "applied": false
-    },
-    "72137767": {
-        "job_title": "Staff ML Engineer",
-        "company_name": "Xero",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/72137767",
-        "applied": false
-    },
-    "72124318": {
-        "job_title": "Python Developer - Data Pipelines",
-        "company_name": "Morgan McKinley",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/72124318",
-        "applied": false
-    },
-    "72133130": {
-        "job_title": "Senior Software Developer - Power Apps, .NET, Python",
-        "company_name": "Rondo Building Services",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/72133130",
-        "applied": false
-    },
-    "72140966": {
-        "job_title": "Senior Software Engineer",
-        "company_name": "Robert Walters",
-        "location": "Sydney",
-        "url": "https://www.seek.co.nz/job/72140966",
-        "applied": false
-    },
-    "72114284": {
-        "job_title": "Senior Python Developer - Federal Government",
-        "company_name": "Talent International",
-        "location": "Melbourne",
-        "url": "https://www.seek.co.nz/job/72114284",
-        "applied": false
-    },
-    "72108920": {
-        "job_title": "Machine Learning Engineer",
-        "company_name": "Aurec Group",
-        "location": "Melbourne",
-        "url": "https://www.seek.co.nz/job/72108920",
-        "applied": false
-    },
-    "72117648": {
-        "job_title": "Software Engineer",
-        "company_name": "Athena Artificial Intelligence",
-        "location": "Brisbane",
-        "url": "https://www.seek.co.nz/job/72117648",
-        "applied": false
-    },
-    "72136420": {
-        "job_title": "Software Developer - Full Stack",
-        "company_name": "Sandfield Associates",
+    "73066037": {
+        "job_title": "Sales Co-ordinator / Customer service",
+        "company_name": "Acorn Stairlifts",
         "location": "Auckland",
-        "url": "https://www.seek.co.nz/job/72136420",
+        "url": "https://www.seek.co.nz/job/73066037",
         "applied": false
     },
-    "71979189": {
-        "job_title": "Software Developer",
-        "company_name": "Crew Technology Recruitment",
-        "location": "Canterbury",
-        "url": "https://www.seek.co.nz/job/71979189",
-        "applied": false
-    },
-    "72108377": {
-        "job_title": "AWS Integration Developer - Java / Python",
-        "company_name": "Comspek International",
-        "location": "Canterbury",
-        "url": "https://www.seek.co.nz/job/72108377",
-        "applied": false
-    },
-    "72108365": {
-        "job_title": "AWS Integration Developer - Java / Python",
-        "company_name": "Comspek International",
+    "73100413": {
+        "job_title": "Service Desk Operator",
+        "company_name": "ECL Group",
         "location": "Wellington",
-        "url": "https://www.seek.co.nz/job/72108365",
+        "url": "https://www.seek.co.nz/job/73100413",
         "applied": false
     },
-    "71696473": {
-        "job_title": "Machine Learning Engineer",
-        "company_name": "Tribe Recruitment",
-        "location": "Auckland",
-        "url": "https://www.seek.co.nz/job/71696473",
+    "73097603": {
+        "job_title": "Customer Service Representative / Trainee Flight Instructor",
+        "company_name": "iFLY Indoor Skydiving NZ Ltd",
+        "location": "Otago",
+        "url": "https://www.seek.co.nz/job/73097603",
         "applied": false
     },
-    "71843707": {
-        "job_title": "Machine Learning Engineer",
-        "company_name": "Scentian Bio",
+    "73066462": {
+        "job_title": "Customer Service Representative",
+        "company_name": "Westpac Bank",
         "location": "Auckland",
-        "url": "https://www.seek.co.nz/job/71843707",
+        "url": "https://www.seek.co.nz/job/73066462",
         "applied": false
     },
-    "71972874": {
-        "job_title": "Data Engineer",
-        "company_name": "Vector",
-        "location": "Auckland",
-        "url": "https://www.seek.co.nz/job/71972874",
-        "applied": false
-    },
-    "71527518": {
-        "job_title": "Senior Python Developer",
-        "company_name": "Robert Half",
-        "location": "Auckland",
-        "url": "https://www.seek.co.nz/job/71527518",
-        "applied": false
-    },
-    "72108350": {
-        "job_title": "AWS Integration Developer - Java / Python",
-        "company_name": "Comspek International",
-        "location": "Auckland",
-        "url": "https://www.seek.co.nz/job/72108350",
-        "applied": false
-    },
-    "71818254": {
-        "job_title": "Software Developer",
-        "company_name": "Kordia",
-        "location": "Auckland",
-        "url": "https://www.seek.co.nz/job/71818254",
-        "applied": true
-    },
-    "71826254": {
-        "job_title": "Software Engineer",
-        "company_name": "Trimble Inc",
+    "73062988": {
+        "job_title": "Customer Service Representative",
+        "company_name": "Westpac Bank",
         "location": "Canterbury",
-        "url": "https://www.seek.co.nz/job/71826254",
-        "applied": true
+        "url": "https://www.seek.co.nz/job/73062988",
+        "applied": false
     },
-    "71904968": {
-        "job_title": "Data Engineer",
-        "company_name": "Tribe Recruitment",
+    "73006890": {
+        "job_title": "Customer Service Representative",
+        "company_name": "Micro Mobility Ltd",
         "location": "Wellington",
-        "url": "https://www.seek.co.nz/job/71904968",
-        "applied": true
+        "url": "https://www.seek.co.nz/job/73006890",
+        "applied": false
+    },
+    "73071334": {
+        "job_title": "Customer Support Consultant for NZ",
+        "company_name": "Direct Safety",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/73071334",
+        "applied": false
+    },
+    "73091079": {
+        "job_title": "Customer Experience Manager - Contact Centre",
+        "company_name": "JUCY",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/73091079",
+        "applied": false
+    },
+    "73001515": {
+        "job_title": "Customer Service Representative",
+        "company_name": "Westpac Bank",
+        "location": "Southland",
+        "url": "https://www.seek.co.nz/job/73001515",
+        "applied": false
+    },
+    "73035174": {
+        "job_title": "Customer Service Representative",
+        "company_name": "Westpac Bank",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/73035174",
+        "applied": false
+    },
+    "73038380": {
+        "job_title": "Customer Service Representative",
+        "company_name": "Westpac Bank",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/73038380",
+        "applied": false
+    },
+    "73097910": {
+        "job_title": "Customer Service Team Member",
+        "company_name": "Bunnings Warehouse",
+        "location": "Waikato",
+        "url": "https://www.seek.co.nz/job/73097910",
+        "applied": false
+    },
+    "73096765": {
+        "job_title": "Support Officer",
+        "company_name": "Ministry of Business, Innovation and Employment NZ",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/73096765",
+        "applied": false
+    },
+    "73103125": {
+        "job_title": "Customer Service Representative",
+        "company_name": "Pinoy NZ Ltd",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/73103125",
+        "applied": false
+    },
+    "73072697": {
+        "job_title": "Customer Service Specialist",
+        "company_name": "Mercury",
+        "location": "Bay of Plenty",
+        "url": "https://www.seek.co.nz/job/73072697",
+        "applied": false
+    },
+    "73162468": {
+        "job_title": "GM Health and Safety Business Partnering",
+        "company_name": "Fonterra",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/73162468",
+        "applied": false
+    },
+    "73047115": {
+        "job_title": "Capability Activation Manager",
+        "company_name": "Fonterra",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/73047115",
+        "applied": false
+    },
+    "73696124": {
+        "job_title": "Software Developer and ECU Tuner",
+        "company_name": "Alt Tune Limited",
+        "location": "Waikato",
+        "url": "https://www.seek.co.nz/job/73696124",
+        "applied": false
+    },
+    "73729810": {
+        "job_title": "Software Engineer",
+        "company_name": "Endace Technology Ltd",
+        "location": "Waikato",
+        "url": "https://www.seek.co.nz/job/73729810",
+        "applied": false
+    },
+    "73677030": {
+        "job_title": "Junior Developer",
+        "company_name": "SiteHost",
+        "location": "Auckland",
+        "url": "https://www.seek.co.nz/job/73677030",
+        "applied": false
     }
 }

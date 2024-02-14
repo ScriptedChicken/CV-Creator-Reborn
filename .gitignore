@@ -1,3 +1,5 @@
 secrets.json
-./outputs/*
+outputs/*
+temporary/*
 .idea
+test.py

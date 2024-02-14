@@ -1,0 +1,1593 @@
+[
+    {
+        "advertiser": {
+            "id": "401135233",
+            "description": "Recruitment Hive"
+        },
+        "automaticInclusion": false,
+        "branding": {
+            "id": "07f5a3fc-92d4-42ca-97a1-46180957d9f8.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/07f5a3fc-92d4-42ca-97a1-46180957d9f8.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/07f5a3fc-92d4-42ca-97a1-46180957d9f8.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [
+            "6 Month contract + possible extensions",
+            "Obtain your Baseline security clearance",
+            "Melbourne, Canberra, Adelaide"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Recruitment Hive",
+        "companyProfileStructuredDataId": 346823,
+        "currencyLabel": "AUD",
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "13h ago",
+        "location": "Melbourne",
+        "locationId": 1002,
+        "locationWhereValue": "All Melbourne VIC AU",
+        "id": 72082298,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Melbourne VIC, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Melbourne VIC AU"
+                },
+                {
+                    "contextualName": "Victoria VIC AU"
+                }
+            ]
+        },
+        "listingDate": "2023-12-08T06:06:37Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "$900 - $1k p.d. + All client fees disclosed",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "72082298",
+            "section": "MAIN",
+            "sectionRank": 1,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "tags": [
+            {
+                "type": "EARLY_APPLICANT",
+                "label": "Early applicant"
+            }
+        ],
+        "teaser": "The successful candidates will have strong proficiency in Python, including knowledge of Python libraries",
+        "title": "Python Developer (s)",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMSIKfQ==",
+        "workType": "Contract/Temp",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "22319711",
+            "description": "Halcyon Knights Pty Ltd"
+        },
+        "area": "CBD, Inner West & Eastern Suburbs",
+        "areaId": 5027,
+        "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW AU",
+        "automaticInclusion": false,
+        "branding": {
+            "id": "633ae9fa-1fbf-a872-9b51-e8bbb6cd122d.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/633ae9fa-1fbf-a872-9b51-e8bbb6cd122d.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/633ae9fa-1fbf-a872-9b51-e8bbb6cd122d.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [
+            "Flexible work arrangements",
+            "Collaborative & diverse team",
+            "Dynamic and fast-paced environment"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Halcyon Knights",
+        "companyProfileStructuredDataId": 23310,
+        "currencyLabel": "AUD",
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "1d ago",
+        "location": "Sydney",
+        "locationId": 1000,
+        "locationWhereValue": "All Sydney NSW AU",
+        "id": 72049427,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Sydney NSW, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Sydney NSW AU"
+                },
+                {
+                    "contextualName": "New South Wales NSW AU"
+                }
+            ]
+        },
+        "listingDate": "2023-12-07T02:52:05Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "salary": "Competitive",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "72049427",
+            "section": "MAIN",
+            "sectionRank": 2,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "suburb": "Sydney",
+        "suburbId": 16351,
+        "suburbWhereValue": "Sydney NSW 2000 AU",
+        "teaser": "We are seeking a skilled Python contractor to join our dynamic fintech team",
+        "title": "Contract position - Python",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMiIKfQ==",
+        "workType": "Contract/Temp",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "36498432",
+            "description": "Outback Equipment"
+        },
+        "area": "CBD & Inner Suburbs",
+        "areaId": 5010,
+        "areaWhereValue": "Brisbane CBD & Inner Suburbs Brisbane QLD AU",
+        "automaticInclusion": false,
+        "bulletPoints": [],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Outback Equipment",
+        "companyProfileStructuredDataId": 283548,
+        "displayType": "standard",
+        "listingDateDisplay": "2d ago",
+        "location": "Brisbane",
+        "locationId": 1004,
+        "locationWhereValue": "All Brisbane QLD AU",
+        "id": 72023223,
+        "isPremium": false,
+        "isStandOut": false,
+        "jobLocation": {
+            "label": "Acacia Ridge, Brisbane QLD, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "Acacia Ridge QLD 4110 AU"
+                },
+                {
+                    "contextualName": "All Brisbane QLD AU"
+                }
+            ]
+        },
+        "listingDate": "2023-12-06T01:31:09Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "72023223",
+            "section": "MAIN",
+            "sectionRank": 3,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "suburb": "Acacia Ridge",
+        "suburbId": 11045,
+        "suburbWhereValue": "Acacia Ridge QLD 4110 AU",
+        "teaser": "We are currently seeking a skilled Python Developer with experience in Django and Pandas are you the right candidate - apply now",
+        "title": "Senior E-commerce Python Developer",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMyIKfQ==",
+        "workType": "Full time",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "27852761",
+            "description": "Lookahead"
+        },
+        "automaticInclusion": false,
+        "branding": {
+            "id": "b51f9d83-0f5e-d445-c1b6-b9c84e281fad.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/b51f9d83-0f5e-d445-c1b6-b9c84e281fad.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/b51f9d83-0f5e-d445-c1b6-b9c84e281fad.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [
+            "Work on a product which uses AI to make peoples' lives easier",
+            "Work alongside other talented and senior engineers",
+            "Have a voice in influencing technical direction"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Lookahead",
+        "companyProfileStructuredDataId": 465937,
+        "currencyLabel": "AUD",
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "3d ago",
+        "location": "Sydney",
+        "locationId": 1000,
+        "locationWhereValue": "All Sydney NSW AU",
+        "id": 71982147,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Sydney NSW, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Sydney NSW AU"
+                },
+                {
+                    "contextualName": "New South Wales NSW AU"
+                }
+            ]
+        },
+        "listingDate": "2023-12-05T05:30:26Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "software-engineer",
+        "salary": "Up to $180k + super",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71982147",
+            "section": "MAIN",
+            "sectionRank": 4,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+        },
+        "teaser": "This problem-solving AI company is looking for a Senior Python Developer to join and play a critical role in influencing their tech direction",
+        "title": "Senior Software Engineer - Python",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfNCIKfQ==",
+        "workType": "Full time",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "45386943",
+            "description": "Healius"
+        },
+        "area": "CBD & Inner Suburbs",
+        "areaId": 5010,
+        "areaWhereValue": "Brisbane CBD & Inner Suburbs Brisbane QLD AU",
+        "automaticInclusion": false,
+        "branding": {
+            "id": "5da68720-dac1-4a4f-b120-cc6582a00ae5.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/5da68720-dac1-4a4f-b120-cc6582a00ae5.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/5da68720-dac1-4a4f-b120-cc6582a00ae5.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [
+            "ASX listed organisation with a mission focused on the health and welfare of all",
+            "Chance to build skills in one of Australia's largest healthcare companies",
+            "Based in Murarrie- Hybrid working available"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Healius",
+        "companyProfileStructuredDataId": 333,
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "10d ago",
+        "location": "Brisbane",
+        "locationId": 1004,
+        "locationWhereValue": "All Brisbane QLD AU",
+        "id": 71821782,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Murarrie, Brisbane QLD, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "Murarrie QLD 4172 AU"
+                },
+                {
+                    "contextualName": "All Brisbane QLD AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-28T02:55:06Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71821782",
+            "section": "MAIN",
+            "sectionRank": 5,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "suburb": "Murarrie",
+        "suburbId": 19577,
+        "suburbWhereValue": "Murarrie QLD 4172 AU",
+        "teaser": "Utilise a combination of programming and analytical skills to formulate and define system scope and objectives",
+        "title": "Python Developer",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfNSIKfQ==",
+        "workType": "Full time",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "24766951",
+            "description": "Spark Recruitment"
+        },
+        "area": "CBD, Inner West & Eastern Suburbs",
+        "areaId": 5027,
+        "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW AU",
+        "automaticInclusion": false,
+        "branding": {
+            "id": "77c46be0-71e2-88cc-c53f-b2478522a247.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/77c46be0-71e2-88cc-c53f-b2478522a247.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/77c46be0-71e2-88cc-c53f-b2478522a247.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [
+            "Lead Python Developer role.  Fullstack environment",
+            "Python, Django, Angular and AWS skills required",
+            "Work on large scale SaaS platforms as a lead engineer"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Spark Recruitment",
+        "companyProfileStructuredDataId": 346882,
+        "currencyLabel": "AUD",
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "14d ago",
+        "location": "Sydney",
+        "locationId": 1000,
+        "locationWhereValue": "All Sydney NSW AU",
+        "id": 71760814,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Sydney NSW, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Sydney NSW AU"
+                },
+                {
+                    "contextualName": "New South Wales NSW AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-24T06:09:00Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "$170k - $180k p.a.",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71760814",
+            "section": "MAIN",
+            "sectionRank": 6,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "suburb": "Sydney",
+        "suburbId": 16351,
+        "suburbWhereValue": "Sydney NSW 2000 AU",
+        "teaser": "Lead Python/ Django Developer role.  Full stack role with a 80/20 split between backend and front end.  Hybrid work environment. Sydney CBD.",
+        "title": "PYTHON DEVELOPER",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfNiIKfQ==",
+        "workType": "Full time",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "4992208",
+            "description": "SYPAQ Systems"
+        },
+        "area": "CBD & Inner Suburbs",
+        "areaId": 5069,
+        "areaWhereValue": "Melbourne CBD & Inner Suburbs Melbourne VIC AU",
+        "automaticInclusion": false,
+        "branding": {
+            "id": "fd011252-814d-32b9-695f-6071fbba2c78.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/fd011252-814d-32b9-695f-6071fbba2c78.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/fd011252-814d-32b9-695f-6071fbba2c78.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [
+            "Perm role with SYPAQ or long term contract",
+            "Work on a Defence project",
+            "Start in January 2024"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "SYPAQ Systems",
+        "companyProfileStructuredDataId": 355301,
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "14d ago",
+        "location": "Melbourne",
+        "locationId": 1002,
+        "locationWhereValue": "All Melbourne VIC AU",
+        "id": 71759839,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Melbourne VIC, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Melbourne VIC AU"
+                },
+                {
+                    "contextualName": "Victoria VIC AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-24T05:26:53Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71759839",
+            "section": "MAIN",
+            "sectionRank": 7,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "suburb": "Melbourne",
+        "suburbId": 18578,
+        "suburbWhereValue": "Melbourne VIC 3000 AU",
+        "teaser": "SYPAQ are seeking a Python Developer for a Defence project",
+        "title": "Python Developer",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfNyIKfQ==",
+        "workType": "Contract/Temp",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "38569229",
+            "description": "PCCW Global"
+        },
+        "area": "CBD & Inner Suburbs",
+        "areaId": 5010,
+        "areaWhereValue": "Brisbane CBD & Inner Suburbs Brisbane QLD AU",
+        "automaticInclusion": false,
+        "bulletPoints": [],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "PCCW Global",
+        "companyProfileStructuredDataId": 363945,
+        "displayType": "standard",
+        "listingDateDisplay": "3d ago",
+        "location": "Brisbane",
+        "locationId": 1004,
+        "locationWhereValue": "All Brisbane QLD AU",
+        "id": 71976549,
+        "isPremium": false,
+        "isStandOut": false,
+        "jobLocation": {
+            "label": "Brisbane QLD, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Brisbane QLD AU"
+                },
+                {
+                    "contextualName": "Queensland QLD AU"
+                }
+            ]
+        },
+        "listingDate": "2023-12-05T03:03:32Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "software-engineer",
+        "salary": "",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71976549",
+            "section": "MAIN",
+            "sectionRank": 8,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+        },
+        "suburb": "Brisbane",
+        "suburbId": 18110,
+        "suburbWhereValue": "Brisbane QLD 4000 AU",
+        "teaser": "We are seeking a\u00a0SENIOR\u00a0software engineer to join our team of expert Python engineers.",
+        "title": "Senior Software Engineer (Python)",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfOCIKfQ==",
+        "workType": "Full time",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "22952456",
+            "description": "Genesis Recruitment Solutions"
+        },
+        "automaticInclusion": false,
+        "branding": {
+            "id": "702bcf12-c680-96f1-4e37-40206f0a79e1.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/702bcf12-c680-96f1-4e37-40206f0a79e1.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/702bcf12-c680-96f1-4e37-40206f0a79e1.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [
+            "Permanent Full Time",
+            "Global Innovator and Technology Company",
+            "Flexible Working Arrangement"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Genesis Recruitment Solutions",
+        "companyProfileStructuredDataId": 23691,
+        "currencyLabel": "AUD",
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "9d ago",
+        "location": "Sydney",
+        "locationId": 1000,
+        "locationWhereValue": "All Sydney NSW AU",
+        "id": 71857793,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Sydney NSW, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Sydney NSW AU"
+                },
+                {
+                    "contextualName": "New South Wales NSW AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-29T05:23:58Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "backend-engineer",
+        "salary": "$140K-$160K Base+Super+Bonus",
+        "searchInsights": {
+            "unmatchedKeywords": [
+                "developer"
+            ]
+        },
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71857793",
+            "section": "MAIN",
+            "sectionRank": 9,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+        },
+        "teaser": "The Senior Backend Engineer is to be responsible for developing, testing, and documenting APIs in Python, maintaining microservices and packages.",
+        "title": "Senior Backend Engineer - Python | Django | Web API",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfOSIKfQ==",
+        "workType": "Full time",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "401135233",
+            "description": "Recruitment Hive"
+        },
+        "area": "CBD & Inner Suburbs",
+        "areaId": 5069,
+        "areaWhereValue": "Melbourne CBD & Inner Suburbs Melbourne VIC AU",
+        "automaticInclusion": false,
+        "branding": {
+            "id": "07f5a3fc-92d4-42ca-97a1-46180957d9f8.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/07f5a3fc-92d4-42ca-97a1-46180957d9f8.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/07f5a3fc-92d4-42ca-97a1-46180957d9f8.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [
+            "Obtain you TSPV Security Clearance",
+            "12 + 12 + 12 month contract - multiple positions",
+            "Canberra, Sydney (Parramatta), Melbourne (Docklands), Adelaide or Brisbane"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Recruitment Hive",
+        "companyProfileStructuredDataId": 346823,
+        "currencyLabel": "AUD",
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "16d ago",
+        "location": "Melbourne",
+        "locationId": 1002,
+        "locationWhereValue": "All Melbourne VIC AU",
+        "id": 71703496,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Docklands, Melbourne VIC, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "Docklands VIC 3008 AU"
+                },
+                {
+                    "contextualName": "All Melbourne VIC AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-22T05:43:32Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "sql-developer",
+        "salary": "$95 - $135 p.h. + $NEG-All agent client fees discl",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71703496",
+            "section": "MAIN",
+            "sectionRank": 10,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "suburb": "Docklands",
+        "suburbId": 15302,
+        "suburbWhereValue": "Docklands VIC 3008 AU",
+        "teaser": "Develop capabilities using Python & SQL for the purpose of integrating a variety of different data types into Enterprise Data Platforms",
+        "title": "Python & SQL Developer",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMTAiCn0=",
+        "workType": "Contract/Temp",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "22952456",
+            "description": "Genesis Recruitment Solutions"
+        },
+        "automaticInclusion": false,
+        "branding": {
+            "id": "702bcf12-c680-96f1-4e37-40206f0a79e1.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/702bcf12-c680-96f1-4e37-40206f0a79e1.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/702bcf12-c680-96f1-4e37-40206f0a79e1.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [
+            "Permanent Full Time",
+            "Global Innovator and Technology Company",
+            "Flexible Working Arrangement"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Genesis Recruitment Solutions",
+        "companyProfileStructuredDataId": 23691,
+        "currencyLabel": "AUD",
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "8d ago",
+        "location": "Sydney",
+        "locationId": 1000,
+        "locationWhereValue": "All Sydney NSW AU",
+        "id": 71883044,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Sydney NSW, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Sydney NSW AU"
+                },
+                {
+                    "contextualName": "New South Wales NSW AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-30T04:16:07Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "backend-engineer",
+        "salary": "$140K-$160K Base+Super+Bonus",
+        "searchInsights": {
+            "unmatchedKeywords": [
+                "developer"
+            ]
+        },
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71883044",
+            "section": "MAIN",
+            "sectionRank": 11,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6294",
+            "description": "Product Management & Development"
+        },
+        "teaser": "The Senior Backend Engineer is to be responsible for developing, testing, and documenting APIs in Python, maintaining microservices and packages.",
+        "title": "Senior Backend Engineer - Python | Web API | Microservices",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMTEiCn0=",
+        "workType": "Full time",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "26107327",
+            "description": "Noventus Pty Ltd"
+        },
+        "area": "CBD, Inner West & Eastern Suburbs",
+        "areaId": 5027,
+        "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW AU",
+        "automaticInclusion": false,
+        "bulletPoints": [
+            "Multiple roles, 12 and 24 month contracts",
+            "Office based - Canberra, Sydney, Melbourne, Brisbane, or Adelaide",
+            "Current TSPV Clearance is ideal, or NV1/NV2"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Noventus",
+        "companyProfileStructuredDataId": 19273,
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "16d ago",
+        "location": "Sydney",
+        "locationId": 1000,
+        "locationWhereValue": "All Sydney NSW AU",
+        "id": 71690802,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Sydney NSW, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Sydney NSW AU"
+                },
+                {
+                    "contextualName": "New South Wales NSW AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-21T23:43:05Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "sql-developer",
+        "salary": "",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71690802",
+            "section": "MAIN",
+            "sectionRank": 12,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "suburb": "Sydney",
+        "suburbId": 16351,
+        "suburbWhereValue": "Sydney NSW 2000 AU",
+        "teaser": "Python & SQL Developer - Contract Role, Office based",
+        "title": "Python & SQL Developer",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMTIiCn0=",
+        "workType": "Contract/Temp",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "28031400",
+            "description": "Aurec"
+        },
+        "automaticInclusion": false,
+        "bulletPoints": [],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Aurec Group",
+        "companyProfileStructuredDataId": 23682,
+        "currencyLabel": "AUD",
+        "displayStyle": {},
+        "displayType": "standard",
+        "listingDateDisplay": "25d ago",
+        "location": "Adelaide",
+        "locationId": 1007,
+        "locationWhereValue": "All Adelaide SA AU",
+        "id": 71467808,
+        "isPremium": false,
+        "isStandOut": false,
+        "jobLocation": {
+            "label": "Adelaide SA, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Adelaide SA AU"
+                },
+                {
+                    "contextualName": "South Australia SA AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-13T03:10:06Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "Flexible working arrangements are encouraged",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71467808",
+            "section": "MAIN",
+            "sectionRank": 13,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "tags": [
+            {
+                "type": "EXPIRES_SOON",
+                "label": "Expires soon"
+            }
+        ],
+        "teaser": "We are looking to engage a skilled and enthusiastic Python Developer to join our Federal Government client!",
+        "title": "Python Developer",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMTMiCn0=",
+        "workType": "Contract/Temp",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "43505033",
+            "description": "Morgan Consulting"
+        },
+        "area": "CBD & Inner Suburbs",
+        "areaId": 5069,
+        "areaWhereValue": "Melbourne CBD & Inner Suburbs Melbourne VIC AU",
+        "automaticInclusion": false,
+        "bulletPoints": [],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Morgan Consulting",
+        "companyProfileStructuredDataId": 353,
+        "currencyLabel": "AUD",
+        "displayStyle": {},
+        "displayType": "standard",
+        "listingDateDisplay": "18d ago",
+        "location": "Melbourne",
+        "locationId": 1002,
+        "locationWhereValue": "All Melbourne VIC AU",
+        "id": 71635098,
+        "isPremium": false,
+        "isStandOut": false,
+        "jobLocation": {
+            "label": "Melbourne VIC, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Melbourne VIC AU"
+                },
+                {
+                    "contextualName": "Victoria VIC AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-20T02:51:10Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "Attractive Daily Rates Depending on Experience",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71635098",
+            "section": "MAIN",
+            "sectionRank": 14,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "suburb": "Melbourne",
+        "suburbId": 18578,
+        "suburbWhereValue": "Melbourne VIC 3000 AU",
+        "teaser": "Python Developer | 12-24 month daily rate contract | Security Clearance/Aus Citizenship required | Canberra/Sydney/Melbourne/Brisbane/Adelaide |",
+        "title": "Python Developer - Security Clearance",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMTQiCn0=",
+        "workType": "Contract/Temp",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "34022762",
+            "description": "Westbury Partners"
+        },
+        "area": "CBD, Inner West & Eastern Suburbs",
+        "areaId": 5027,
+        "areaWhereValue": "Sydney CBD, Inner West & Eastern Suburbs Sydney NSW AU",
+        "automaticInclusion": false,
+        "branding": {
+            "id": "e3b04dd5-0c61-34ed-c6d4-dbefa8f9a642.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/e3b04dd5-0c61-34ed-c6d4-dbefa8f9a642.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/e3b04dd5-0c61-34ed-c6d4-dbefa8f9a642.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [
+            "Prop / High Frequency Trading (HFT) environment and exposure to Trading",
+            "Modern Java, Python, SOLID Design, Linux,  Algos, High Performance, Low Latency",
+            "Elite engineers, WFH options, the best tech/toys, outstanding incentives!"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Westbury Partners",
+        "companyProfileStructuredDataId": 329007,
+        "currencyLabel": "AUD",
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "11d ago",
+        "location": "Sydney",
+        "locationId": 1000,
+        "locationWhereValue": "All Sydney NSW AU",
+        "id": 71796223,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Sydney NSW, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Sydney NSW AU"
+                },
+                {
+                    "contextualName": "New South Wales NSW AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-27T03:04:46Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "$200,000 \u2013 $400,000+++ per year",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71796223",
+            "section": "MAIN",
+            "sectionRank": 15,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "suburb": "Sydney",
+        "suburbId": 16351,
+        "suburbWhereValue": "Sydney NSW 2000 AU",
+        "teaser": "Design, extend & improve low latency, high performance trading systems. Consistent project pipeline, fast/frequent release, elite engineers, Big $$$",
+        "title": "Sr Java (Core) + Python Developer, Market Making, High Frequency Trading",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMTUiCn0=",
+        "workType": "Full time",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "28031400",
+            "description": "Aurec"
+        },
+        "automaticInclusion": false,
+        "bulletPoints": [],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Aurec Group",
+        "companyProfileStructuredDataId": 23682,
+        "currencyLabel": "AUD",
+        "displayStyle": {},
+        "displayType": "standard",
+        "listingDateDisplay": "25d ago",
+        "location": "Brisbane",
+        "locationId": 1004,
+        "locationWhereValue": "All Brisbane QLD AU",
+        "id": 71467752,
+        "isPremium": false,
+        "isStandOut": false,
+        "jobLocation": {
+            "label": "Brisbane QLD, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Brisbane QLD AU"
+                },
+                {
+                    "contextualName": "Queensland QLD AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-13T03:08:23Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "Flexible working arrangements are encouraged",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71467752",
+            "section": "MAIN",
+            "sectionRank": 16,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "tags": [
+            {
+                "type": "EXPIRES_SOON",
+                "label": "Expires soon"
+            }
+        ],
+        "teaser": "We are looking to engage a skilled and enthusiastic Python Developer to join our Federal Government client!",
+        "title": "Python Developer",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMTYiCn0=",
+        "workType": "Contract/Temp",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "46169223",
+            "description": "The Nielsen Company (Australia) Pty Ltd"
+        },
+        "area": "North Shore & Northern Beaches",
+        "areaId": 5028,
+        "areaWhereValue": "North Shore & Northern Beaches Sydney NSW AU",
+        "automaticInclusion": false,
+        "branding": {
+            "id": "8feae22c-f051-46ab-8948-ec4679793730.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/8feae22c-f051-46ab-8948-ec4679793730.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/8feae22c-f051-46ab-8948-ec4679793730.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Nielsen",
+        "companyProfileStructuredDataId": 321,
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "21d ago",
+        "location": "Sydney",
+        "locationId": 1000,
+        "locationWhereValue": "All Sydney NSW AU",
+        "id": 71593448,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Lane Cove, Sydney NSW, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "Lane Cove NSW 2066 AU"
+                },
+                {
+                    "contextualName": "All Sydney NSW AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-17T03:33:00Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71593448",
+            "section": "MAIN",
+            "sectionRank": 17,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "suburb": "Lane Cove",
+        "suburbId": 13560,
+        "suburbWhereValue": "Lane Cove NSW 2066 AU",
+        "teaser": "We are looking for a candidate with experience in AWS e.g. glue jobs, pyspark, athena and also apache airflow.",
+        "title": "Python Developer",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMTciCn0=",
+        "workType": "Full time",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "46555490",
+            "description": "Swordfish Computing"
+        },
+        "automaticInclusion": false,
+        "branding": {
+            "id": "eedb9da4-69ef-4306-966b-f2381d11a8b2.1",
+            "assets": {
+                "logo": {
+                    "strategies": {
+                        "jdpLogo": "https://bx-branding-gateway.cloud.seek.com.au/eedb9da4-69ef-4306-966b-f2381d11a8b2.1/jdpLogo",
+                        "serpLogo": "https://bx-branding-gateway.cloud.seek.com.au/eedb9da4-69ef-4306-966b-f2381d11a8b2.1/serpLogo"
+                    }
+                }
+            }
+        },
+        "bulletPoints": [
+            "Join a dynamic work environment with friendly and supportive teammates",
+            "Apply your AI/ML knowledge to advance the state-of-the-art in Defence technology",
+            "Attractive remuneration, flexibility and work/life balance"
+        ],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyProfileStructuredDataId": 0,
+        "displayStyle": {
+            "search": "A"
+        },
+        "displayType": "standout",
+        "listingDateDisplay": "3d ago",
+        "location": "Adelaide",
+        "locationId": 1007,
+        "locationWhereValue": "All Adelaide SA AU",
+        "id": 71972128,
+        "isPremium": false,
+        "isStandOut": true,
+        "jobLocation": {
+            "label": "Adelaide SA, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Adelaide SA AU"
+                },
+                {
+                    "contextualName": "South Australia SA AU"
+                }
+            ]
+        },
+        "listingDate": "2023-12-05T00:16:16Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "software-engineer",
+        "salary": "",
+        "searchInsights": {
+            "unmatchedKeywords": [
+                "developer"
+            ]
+        },
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71972128",
+            "section": "MAIN",
+            "sectionRank": 18,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+        },
+        "suburb": "Adelaide",
+        "suburbId": 11065,
+        "suburbWhereValue": "Adelaide SA 5000 AU",
+        "teaser": "An experienced and motivated engineer with a passion for AI, LM and Computer vision and AI to work as a valued member of our multi-skilled teams.",
+        "title": "Software Engineer - AI, ML, Robotics & Computer Vision",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMTgiCn0=",
+        "workType": "Full time",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "43521592",
+            "description": "Clarrow Pty Ltd"
+        },
+        "area": "CBD & Inner Suburbs",
+        "areaId": 5069,
+        "areaWhereValue": "Melbourne CBD & Inner Suburbs Melbourne VIC AU",
+        "automaticInclusion": false,
+        "bulletPoints": [],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Clarrow",
+        "companyProfileStructuredDataId": 407597,
+        "displayStyle": {},
+        "displayType": "standard",
+        "listingDateDisplay": "16d ago",
+        "location": "Melbourne",
+        "locationId": 1002,
+        "locationWhereValue": "All Melbourne VIC AU",
+        "id": 71690274,
+        "isPremium": false,
+        "isStandOut": false,
+        "jobLocation": {
+            "label": "Melbourne VIC, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Melbourne VIC AU"
+                },
+                {
+                    "contextualName": "Victoria VIC AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-21T23:11:04Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71690274",
+            "section": "MAIN",
+            "sectionRank": 19,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6290",
+            "description": "Engineering - Software"
+        },
+        "suburb": "Melbourne",
+        "suburbId": 18578,
+        "suburbWhereValue": "Melbourne VIC 3000 AU",
+        "teaser": "Are you an ambitious Quant Engineer who has a background in C++ / Python and Quant Strategies?",
+        "title": "Quantitative Python Developer Capital Markets Quant Desk",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMTkiCn0=",
+        "workType": "Full time",
+        "isPrivateAdvertiser": false
+    },
+    {
+        "advertiser": {
+            "id": "28031400",
+            "description": "Aurec"
+        },
+        "automaticInclusion": false,
+        "bulletPoints": [],
+        "classification": {
+            "id": "6281",
+            "description": "Information & Communication Technology"
+        },
+        "companyName": "Aurec Group",
+        "companyProfileStructuredDataId": 23682,
+        "currencyLabel": "AUD",
+        "displayStyle": {},
+        "displayType": "standard",
+        "listingDateDisplay": "25d ago",
+        "location": "Canberra",
+        "locationId": 1015,
+        "locationWhereValue": "All Canberra ACT AU",
+        "id": 71467693,
+        "isPremium": false,
+        "isStandOut": false,
+        "jobLocation": {
+            "label": "Canberra ACT, AU",
+            "countryCode": "AU",
+            "seoHierarchy": [
+                {
+                    "contextualName": "All Canberra ACT AU"
+                },
+                {
+                    "contextualName": "Australian Capital Territory ACT AU"
+                }
+            ]
+        },
+        "listingDate": "2023-11-13T03:06:26Z",
+        "logo": {
+            "id": "",
+            "description": null
+        },
+        "roleId": "python-developer",
+        "salary": "Flexible working arrangements are encouraged",
+        "solMetadata": {
+            "searchRequestToken": "e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "token": "0~e538bca8-6ec2-4510-b182-39c963d16bf4",
+            "jobId": "71467693",
+            "section": "MAIN",
+            "sectionRank": 20,
+            "jobAdType": "ORGANIC",
+            "tags": {
+                "mordor__flights": "mordor_272",
+                "mordor__s": "0"
+            }
+        },
+        "subClassification": {
+            "id": "6287",
+            "description": "Developers/Programmers"
+        },
+        "suburb": "Canberra",
+        "suburbId": 22487,
+        "suburbWhereValue": "Canberra ACT 2600 AU",
+        "tags": [
+            {
+                "type": "EXPIRES_SOON",
+                "label": "Expires soon"
+            }
+        ],
+        "teaser": "We are looking to engage a skilled and enthusiastic Python Developer to join our Federal Government client!",
+        "title": "Python Developer",
+        "tracking": "ewogICJ0b2tlbiI6ICJlMmZlNzQ0ZS0zNDYzLTQyYjAtOTRhMy0wMjM0NjMyMzhkYmRfMjAiCn0=",
+        "workType": "Contract/Temp",
+        "isPrivateAdvertiser": false
+    }
+]

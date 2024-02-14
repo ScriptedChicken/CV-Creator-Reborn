@@ -285,7 +285,7 @@ class Interface(Seeker):
         self.temp_path_dict = {}
 
         self.main_frame = ttk.Frame(root)
-        self.main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
+        self.main_frame.pack(fill=tk.BOTH, expand=True, padx=40, pady=30)
 
         self.name_label = ttk.Label(self.main_frame, text="Your name:")
         self.name_label.grid(row=0, column=0, columnspan=2, pady=5, padx=5, sticky='E')
@@ -388,16 +388,6 @@ class Interface(Seeker):
 if __name__ == "__main__":
     root = tk.Tk()
     app = Interface(root)
-    # app.name_entry.insert(0, "Juan Carlos")
-    # app.role_dropdown.set('retail assistant')
-    # app.temp_path_dict = {
-    #     "cv": r"templates/cv_juan_carlos.docx",
-    #     "cover_letter": r"templates/cover_letter_juan_carlos.docx"
-    # }
-    # app.where_entry.insert(0, "All New Zealand")
-    # app.keywords_entry.insert(0, "Customer service")
-    # test_path = r"C:\Users\angus\Documents\CV_Creator_Reborn\temporary"
-    # app.messages_label.config(text=f'Set temporary path to {test_path}')
     app.root.mainloop()
 
 print("Complete")
