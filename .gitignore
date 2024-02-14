@@ -1,4 +1,5 @@
 secrets.json
+visited_jobs.json
 outputs/*
 temporary/*
 .idea

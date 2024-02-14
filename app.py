@@ -90,6 +90,10 @@ class Seeker(object):
         self.wait_random()
 
     def read_visited_jobs(self):
+        if os.path.exists('visited_jobs.json') is False:
+            with open('visited_jobs.json', 'w') as file:
+                json.dump({}, file)
+
         with open('visited_jobs.json', 'r') as file:
             self.visited_jobs = json.load(file)
     
