@@ -1,5 +1,4 @@
 import os
-import platform
 from abc import ABC, abstractmethod
 from pathlib import Path
 
@@ -83,7 +82,7 @@ class DocxHandler(DocumentHandler):
 
 class OdtHandler(DocumentHandler):
     def __init__(self):
-        # raise NotImplementedError("Currently not replacing text correctly.")
+        raise NotImplementedError("Currently not replacing text correctly.")
         self.document = None
         self.file_path = None
 
@@ -191,27 +190,3 @@ class AgnosticDocument:
 
     def get_supported_formats(self):
         return [".docx", ".odt"]
-
-
-if __name__ == "__main__":
-    doc_processor = AgnosticDocument()
-
-    try:
-        doc_processor.open_document("template.docx")
-        doc_processor.update_document()
-
-        replacements = {
-            "{{name}}": "John Doe",
-            "{{date}}": "2024-01-15",
-            "{{company}}": "Example Corp",
-            "{{position}}": "Software Developer",
-        }
-        doc_processor.update_multiple(replacements)
-
-        doc_processor.save_document("output.docx")
-        print("Document updated successfully!")
-
-    except Exception as e:
-        print(f"Error: {e}")
-    finally:
-        doc_processor.close_document()

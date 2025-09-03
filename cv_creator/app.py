@@ -1,5 +1,3 @@
-from datetime import date
-
 from cv_creator.data import Replacements
 from cv_creator.documents import AgnosticDocument
 

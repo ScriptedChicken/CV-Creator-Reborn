@@ -1,8 +1,9 @@
+import os
+
 import pytest
 
 from cv_creator.app import Creator
 from cv_creator.data import Replacements
-import os
 
 
 class TestCreator:
@@ -10,11 +11,7 @@ class TestCreator:
         "path",
         [
             pytest.param(
-                "./tests/inputs/cover_letter_template_gpt.odt",
-                id="test_run_odt",
-            ),
-            pytest.param(
-                "./tests/inputs/cover_letter_template_gpt.docx",
+                "./tests/inputs/cover_letter_template.docx",
                 id="test_run_docx",
             ),
         ],
