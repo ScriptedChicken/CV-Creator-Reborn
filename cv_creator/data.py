@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from datetime import date
+from cv_creator.seek_api import SeekApiResult
 
 
 @dataclass
@@ -7,6 +8,10 @@ class Replacements:
     job_title: str
     company: str
     location: str
+
+    @classmethod
+    def from_result(cls, result: SeekApiResult):
+        return cls(job_title=result.title, company=result.advertiser, location=result.address)
 
     def to_dict(self):
         return {
