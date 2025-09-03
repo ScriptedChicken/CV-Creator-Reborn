@@ -18,22 +18,8 @@ class SeekApiResult:
     def __init__(self, data):
         self.data = data
 
-    @property
-    def title(self):
-        return self.data["title"]
-
-    @property
-    def advertiser(self):
-        return self.data["advertiser"]["description"]
-
-    @property
-    def categories(self):
-        return [
-            c["classification"]["description"] for c in self.data["classifications"]
-        ]
-
-    @property
-    def description(self):
+    @classmethod
+    def from_id(cls, job_id):
         headers = {
             "Host": "www.seek.co.nz",
             "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:142.0) Gecko/20100101 Firefox/142.0",
@@ -61,7 +47,7 @@ class SeekApiResult:
         payload = {
             "operationName": "jobDetails",
             "variables": {
-                "jobId": self.job_id,
+                "jobId": job_id,
                 "jobDetailsViewedCorrelationId": "",
                 "sessionId": "",
                 "zone": "anz-2",
@@ -78,16 +64,34 @@ class SeekApiResult:
         response = requests.post('https://www.seek.co.nz/graphql', json=payload, headers=headers)
         response.raise_for_status()
         data = response.json()
-        raw_description = data['data']['jobDetails']['job']['content']
+        return cls(data)
+
+    @property
+    def title(self):
+        return self.data['data']['jobDetails']['job']['title']
+
+    @property
+    def advertiser(self):
+        return self.data['data']['jobDetails']['job']['advertiser']['name']
+
+    @property
+    def categories(self):
+        return [
+            c["label"] for c in self.data['data']['jobDetails']['job']["classifications"]
+        ]
+
+    @property
+    def description(self):
+        raw_description = self.data['data']['jobDetails']['job']['content']
         return re.sub(r'<.*?>', ' ', raw_description)
 
     @property
     def address(self):
-        return self.data["locations"][0]["label"]
+        return self.data['data']['jobDetails']['job']['location']['label']
 
     @property
     def job_id(self):
-        return self.data["id"]
+        return self.data['data']['jobDetails']['job']['id']
 
     @property
     def url(self):
@@ -95,11 +99,12 @@ class SeekApiResult:
 
     @property
     def employment_type(self):
-        return self.data["workTypes"][0]
+        return self.data['data']['jobDetails']['job']['workTypes']['label']
 
     @property
     def posted_date(self):
-        return datetime.fromisoformat(self.data["listingDate"]).date()
+        date_string = self.data['data']['jobDetails']['job']['listedAt']['dateTimeUtc']
+        return datetime.fromisoformat(date_string).date()
 
     def get_item(self) -> dict:
         return {
@@ -143,7 +148,8 @@ class SeekApi:
         response = self.session.get(self.api_url, params=params)
         response.raise_for_status()
         for data in response.json().get("data", []):
-            yield SeekApiResult(data)
+            job_id = data["id"]
+            yield SeekApiResult.from_id(job_id)
 
     def from_url(self, url:str, **kwargs):
         """
