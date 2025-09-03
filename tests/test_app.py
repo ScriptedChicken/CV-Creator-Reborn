@@ -2,6 +2,7 @@ import pytest
 
 from cv_creator.app import Creator
 from cv_creator.data import Replacements
+import os
 
 
 class TestCreator:
@@ -23,6 +24,7 @@ class TestCreator:
             job_title="Fake Job", company="ACME Products", location="The Moon"
         )
         output_path = path.replace("inputs", "outputs")
-        creator = Creator(path, replacements)
-        creator.run(output_path)
+        creator = Creator(path)
+        creator.run(replacements, output_path)
         assert True
+        os.remove(output_path)
