@@ -1,4 +1,4 @@
-from cv_creator.app import Creator, Replacements
+from cv_creator.creator import Creator, Replacements
 from cv_creator.seek_api import SeekApi
 
 api = SeekApi()

@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from cv_creator.app import Creator
+from cv_creator.creator import Creator
 from cv_creator.data import Replacements
 
 
