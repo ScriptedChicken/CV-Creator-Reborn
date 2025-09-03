@@ -1,6 +1,5 @@
 import threading
 import tkinter as tk
-from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
 from cv_creator.app import Creator, Replacements
@@ -10,14 +9,12 @@ from cv_creator.seek_api import SeekApi
 class CoverLetterCreatorGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("cover letter Creator")
+        self.root.title("Cover Letter Creator")
         self.root.geometry("600x400")
         self.root.resizable(True, True)
 
         self.url_var = tk.StringVar()
-        self.template_path_var = tk.StringVar(
-            value="templates/cover_letter_template.docx"
-        )
+        self.template_path_var = tk.StringVar()
         self.status_var = tk.StringVar(value="Ready")
 
         self.api = SeekApi()

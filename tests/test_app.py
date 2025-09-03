@@ -20,8 +20,7 @@ class TestCreator:
         replacements = Replacements(
             job_title="Fake Job", company="ACME Products", location="The Moon"
         )
-        output_path = path.replace("inputs", "outputs")
         creator = Creator(path)
-        creator.run(replacements, output_path)
+        output_path = creator.run(replacements)
         assert True
         os.remove(output_path)
