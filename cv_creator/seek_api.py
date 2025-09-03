@@ -162,9 +162,10 @@ class SeekApi:
         """
         eg: https://www.seek.co.nz/jobs?jobId=86448735&type=promoted
         """
-        pattern = r"jobId=(\d+)"
+        patterns = [r"jobId=(\d+)", r"job\/(\d+)"]
         import re
 
-        results = re.findall(pattern, url)
-        for result in results:
-            yield from self.search(query=None, id=result, **kwargs)
+        for pattern in patterns:
+            results = re.findall(pattern, url)
+            for result in results:
+                yield from self.search(query=None, id=result, **kwargs)
