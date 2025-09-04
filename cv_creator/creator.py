@@ -18,7 +18,7 @@ class Creator:
         document.open_document(self.path)
         for key, value in replacements.to_dict().items():
             document.update_document(key, value)
-        document.execute_chat_gpt_prompts(replacements)
+        document.execute_chat_gpt_prompts(description)
 
         document.save_document(output_path)
         document.close_document()
