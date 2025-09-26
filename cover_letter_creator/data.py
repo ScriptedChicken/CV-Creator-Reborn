@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from datetime import date
 
-from cv_creator.seek_api import SeekApiResult
+from cover_letter_creator.seek_api import SeekApiResult
 
 
 @dataclass

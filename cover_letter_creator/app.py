@@ -2,8 +2,8 @@ import threading
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
-from cv_creator.creator import Creator, Replacements
-from cv_creator.seek_api import SeekApi
+from cover_letter_creator.creator import Creator, Replacements
+from cover_letter_creator.seek_api import SeekApi
 
 
 class CoverLetterCreatorGUI:
@@ -130,13 +130,13 @@ class CoverLetterCreatorGUI:
         self.status_var.set("Processing...")
         self.log_text.delete(1.0, tk.END)
 
-        thread = threading.Thread(target=self.process_cv, args=(url, template_path))
+        thread = threading.Thread(target=self.process_cover_letter, args=(url, template_path))
         thread.daemon = True
         thread.start()
 
         self.check_thread_status(thread)
 
-    def process_cv(self, url, template_path):
+    def process_cover_letter(self, url, template_path):
         try:
             self.log_message(f"Starting processing for URL: {url}")
             self.log_message(f"Using template: {template_path}")

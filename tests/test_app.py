@@ -3,8 +3,8 @@ from os.path import exists
 
 import pytest
 
-from cv_creator.creator import Creator
-from cv_creator.data import Replacements
+from cover_letter_creator.creator import Creator
+from cover_letter_creator.data import Replacements
 
 
 class TestCreator:

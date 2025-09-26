@@ -2,8 +2,8 @@ import re
 from datetime import date
 from os.path import join
 
-from cv_creator.data import Replacements
-from cv_creator.documents import DocxHandler
+from cover_letter_creator.data import Replacements
+from cover_letter_creator.documents import DocxHandler
 
 
 class Creator:
