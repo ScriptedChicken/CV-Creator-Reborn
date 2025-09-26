@@ -1,10 +1,6 @@
-# CV Creator Reborn
+# Cover Letter Creator Reborn
 
-Semi-automation of applying for jobs via www.seek.co.nz.
-
-- Automatically fill in Word documents from job applications
-- Automate basic click actions and logging in
-- ChatGPT integration
+Automation of cover letter creation via jobs from www.seek.co.nz.
 
 ## To install
 `pip install requirements.txt`
