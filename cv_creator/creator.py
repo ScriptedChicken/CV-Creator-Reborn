@@ -1,3 +1,4 @@
+import re
 from datetime import date
 from os.path import join
 
@@ -9,10 +10,19 @@ class Creator:
     def __init__(self, path: str) -> None:
         self.path = path
 
-    def run(self, replacements: Replacements, description: str|None = None, output_dir: str = "."):
+    def run(
+        self,
+        replacements: Replacements,
+        description: str | None = None,
+        output_dir: str = ".",
+        applicant_name: str | None = None,
+    ):
         ext = self.path.split(".")[-1]
-        file_name = f"{replacements.job_title}_{date.today()}.{ext}".lower()
-        output_path = join(output_dir, file_name)
+        file_name = f"cover_letter_{applicant_name}_{replacements.job_title}_{date.today()}.{ext}"
+        output_path = (
+            join(output_dir, file_name.lower()).replace(" ", "_").replace("-", "_")
+        )
+        output_path = re.sub(r"_{2:}", "_", output_path)
 
         document = DocxHandler()
         document.open_document(self.path)

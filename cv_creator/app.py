@@ -7,15 +7,17 @@ from cv_creator.seek_api import SeekApi
 
 
 class CoverLetterCreatorGUI:
-    def __init__(self, root):
+    def __init__(self, root, name="", template_path="", output_dir=""):
         self.root = root
         self.root.title("Cover Letter Creator")
-        self.root.geometry("600x400")
+        self.root.geometry("600x500")
         self.root.resizable(True, True)
 
         self.url_var = tk.StringVar()
-        self.template_path_var = tk.StringVar()
+        self.template_path_var = tk.StringVar(value=template_path)
         self.status_var = tk.StringVar(value="Ready")
+        self.name_var = tk.StringVar(value=name)
+        self.output_dir_var = tk.StringVar(value=output_dir)
 
         self.api = SeekApi()
         self.is_processing = False
@@ -30,17 +32,23 @@ class CoverLetterCreatorGUI:
         self.root.rowconfigure(0, weight=1)
         main_frame.columnconfigure(1, weight=1)
 
-        ttk.Label(main_frame, text="Job URL:").grid(
+        ttk.Label(main_frame, text="Your name:").grid(
             row=0, column=0, sticky=tk.W, pady=5
         )
-        url_entry = ttk.Entry(main_frame, textvariable=self.url_var, width=50)
-        url_entry.grid(row=0, column=1, sticky=(tk.W, tk.E), pady=5, padx=(5, 0))
+        name_entry = ttk.Entry(main_frame, textvariable=self.name_var, width=50)
+        name_entry.grid(row=0, column=1, sticky=(tk.W, tk.E), pady=5, padx=(5, 0))
 
-        ttk.Label(main_frame, text="Template File:").grid(
+        ttk.Label(main_frame, text="Job URL:").grid(
             row=1, column=0, sticky=tk.W, pady=5
         )
+        url_entry = ttk.Entry(main_frame, textvariable=self.url_var, width=50)
+        url_entry.grid(row=1, column=1, sticky=(tk.W, tk.E), pady=5, padx=(5, 0))
+
+        ttk.Label(main_frame, text="Template File:").grid(
+            row=2, column=0, sticky=tk.W, pady=5
+        )
         template_frame = ttk.Frame(main_frame)
-        template_frame.grid(row=1, column=1, sticky=(tk.W, tk.E), pady=5)
+        template_frame.grid(row=2, column=1, sticky=(tk.W, tk.E), pady=5)
 
         template_entry = ttk.Entry(
             template_frame, textvariable=self.template_path_var, width=40
@@ -52,24 +60,32 @@ class CoverLetterCreatorGUI:
             row=0, column=1, sticky=tk.E
         )
 
+        ttk.Label(main_frame, text="Output directory:").grid(
+            row=3, column=0, sticky=tk.W, pady=5
+        )
+        output_dir_entry = ttk.Entry(
+            main_frame, textvariable=self.output_dir_var, width=50
+        )
+        output_dir_entry.grid(row=3, column=1, sticky=(tk.W, tk.E), pady=5, padx=(5, 0))
+
         self.process_btn = ttk.Button(
             main_frame, text="Generate cover letter", command=self.start_processing
         )
-        self.process_btn.grid(row=3, column=0, columnspan=2, pady=20)
+        self.process_btn.grid(row=4, column=0, columnspan=2, pady=20)
 
         self.progress = ttk.Progressbar(main_frame, mode="indeterminate")
-        self.progress.grid(row=4, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=5)
+        self.progress.grid(row=5, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=5)
 
         status_label = ttk.Label(main_frame, textvariable=self.status_var)
-        status_label.grid(row=5, column=0, columnspan=2, pady=5)
+        status_label.grid(row=6, column=0, columnspan=2, pady=5)
 
         ttk.Label(main_frame, text="Processing Log:").grid(
-            row=6, column=0, sticky=tk.W, pady=(20, 5)
+            row=7, column=0, sticky=tk.W, pady=(20, 5)
         )
 
         text_frame = ttk.Frame(main_frame)
         text_frame.grid(
-            row=7, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), pady=5
+            row=8, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S), pady=5
         )
         text_frame.columnconfigure(0, weight=1)
         text_frame.rowconfigure(0, weight=1)
@@ -83,7 +99,7 @@ class CoverLetterCreatorGUI:
         self.log_text.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         scrollbar.grid(row=0, column=1, sticky=(tk.N, tk.S))
 
-        main_frame.rowconfigure(7, weight=1)
+        main_frame.rowconfigure(8, weight=1)
 
     def browse_template(self):
         file_path = filedialog.askopenfilename(
@@ -133,7 +149,12 @@ class CoverLetterCreatorGUI:
                 self.log_message(f"Processing result {results_count}...")
 
                 replacements = Replacements.from_result(result)
-                output_path = creator.run(replacements=replacements, description=result.description)
+                output_path = creator.run(
+                    replacements=replacements,
+                    description=result.description,
+                    output_dir=self.output_dir_var.get(),
+                    applicant_name=self.name_var.get(),
+                )
 
                 self.log_message(f"Created: {output_path}")
 
@@ -174,7 +195,7 @@ class CoverLetterCreatorGUI:
 def main():
     root = tk.Tk()
     app = CoverLetterCreatorGUI(root)
-    root.mainloop()
+    app.root.mainloop()
 
 
 if __name__ == "__main__":

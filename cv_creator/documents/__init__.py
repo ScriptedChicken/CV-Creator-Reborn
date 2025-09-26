@@ -1,8 +1,8 @@
-from abc import ABC, abstractmethod
-from openai import OpenAI
 import re
-from dotenv import dotenv_values
+from abc import ABC, abstractmethod
 
+from dotenv import dotenv_values
+from openai import OpenAI
 
 CONFIG = dotenv_values()
 
@@ -41,20 +41,21 @@ class DocxHandler(DocumentHandler):
             )
         except Exception as e:
             raise Exception(f"Error opening .docx file: {e}")
-        
+
     def return_chat_gpt_response(self, query, job_description):
         client = OpenAI(api_key=CONFIG["OPENAI_KEY"])
         message = f"{query}: {job_description}"
         chat_completion = client.chat.completions.create(
-            messages=[{"role": "user", "content": message}], model="gpt-3.5-turbo",
+            messages=[{"role": "user", "content": message}],
+            model="gpt-3.5-turbo",
         )
         return chat_completion.choices[0].message.content
-    
+
     def execute_chat_gpt_prompts(self, description):
-        start_tag = '<CHAT_GPT>'
-        end_tag = '</CHAT_GPT>'
+        start_tag = "<CHAT_GPT>"
+        end_tag = "</CHAT_GPT>"
         for paragraph in self.document.paragraphs:
-            matches = re.findall(fr"{start_tag}(.*?){end_tag}", paragraph.text)
+            matches = re.findall(rf"{start_tag}(.*?){end_tag}", paragraph.text)
             if matches:
                 for match in matches:
                     for tag in [start_tag, end_tag]:
@@ -62,7 +63,9 @@ class DocxHandler(DocumentHandler):
 
                     query_response = self.return_chat_gpt_response(match, description)
                     placeholder_text = f"{start_tag}{match}{end_tag}"
-                    paragraph.text = paragraph.text.replace(placeholder_text, query_response, 1)
+                    paragraph.text = paragraph.text.replace(
+                        placeholder_text, query_response, 1
+                    )
 
     def update_document(self, key, value):
         if not self.document:

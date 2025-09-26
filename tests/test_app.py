@@ -1,4 +1,5 @@
 import os
+from os.path import exists
 
 import pytest
 
@@ -22,5 +23,5 @@ class TestCreator:
         )
         creator = Creator(path)
         output_path = creator.run(replacements)
-        assert True
+        assert exists(output_path)
         os.remove(output_path)
