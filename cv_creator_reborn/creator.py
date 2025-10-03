@@ -25,14 +25,12 @@ class Creator:
         mode: CreatorMode = CreatorMode.COVER_LETTER,
     ):
         ext = self.path.split(".")[-1]
+        file_name = f"{mode.value}_{applicant_name}_{replacements.job_title}_{date.today()}.{ext}"
         file_name = (
-            f"{mode}_{applicant_name}_{replacements.job_title}_{date.today()}.{ext}"
+            file_name.lower().replace(" ", "_").replace("-", "_").replace("/", "_")
         )
-        file_name = file_name.replace("/", "_")
-        output_path = (
-            join(output_dir, file_name.lower()).replace(" ", "_").replace("-", "_")
-        )
-        output_path = re.sub(r"_{2,}", "_", output_path)
+        file_name = re.sub(r"_{2,}", "_", file_name)
+        output_path = join(output_dir, file_name)
 
         document = DocxHandler()
         document.open_document(self.path)

@@ -2,12 +2,16 @@ import threading
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
+import requests
+
 from cv_creator_reborn.apis.seek import SeekApi
-from cv_creator_reborn.creator import Creator, Replacements
+from cv_creator_reborn.creator import Creator, CreatorMode, Replacements
 
 
 class CoverLetterCreatorGUI:
-    def __init__(self, root, name="", template_path="", output_dir=""):
+    def __init__(
+        self, root, name="", template_path="", output_dir="", session=requests.Session()
+    ):
         self.root = root
         self.root.title("Cover Letter Creator")
         self.root.geometry("600x500")
@@ -19,7 +23,7 @@ class CoverLetterCreatorGUI:
         self.name_var = tk.StringVar(value=name)
         self.output_dir_var = tk.StringVar(value=output_dir)
 
-        self.api = SeekApi()
+        self.api = SeekApi(session)
         self.is_processing = False
 
         self.setup_ui()
@@ -156,6 +160,7 @@ class CoverLetterCreatorGUI:
                     description=result.description,
                     output_dir=self.output_dir_var.get(),
                     applicant_name=self.name_var.get(),
+                    mode=CreatorMode.COVER_LETTER,
                 )
 
                 self.log_message(f"Created: {output_path}")
