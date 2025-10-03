@@ -47,7 +47,7 @@ class DocxHandler(DocumentHandler):
         message = f"{query}: {job_description}"
         chat_completion = client.chat.completions.create(
             messages=[{"role": "user", "content": message}],
-            model="gpt-3.5-turbo",
+            model="gpt-4.1-mini",
         )
         return chat_completion.choices[0].message.content
 

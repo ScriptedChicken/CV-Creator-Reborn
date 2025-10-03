@@ -6,6 +6,7 @@ import requests
 
 from cv_creator_reborn.apis.seek import SeekApi
 from cv_creator_reborn.creator import Creator, CreatorMode, Replacements
+from os.path import basename
 
 
 class CoverLetterCreatorGUI:
@@ -147,6 +148,15 @@ class CoverLetterCreatorGUI:
             self.log_message(f"Starting processing for URL: {url}")
             self.log_message(f"Using template: {template_path}")
 
+            file_name: str = basename(template_path)
+            if file_name.startswith('cv'):
+                mode = CreatorMode.CV
+            elif file_name.startswith('cover_letter'):
+                mode = CreatorMode.COVER_LETTER
+            else:
+                print('Couldn\'t interpolate creator mode from file name, using default.')
+                mode = CreatorMode.COVER_LETTER
+
             creator = Creator(template_path)
             results_count = 0
 
@@ -160,7 +170,7 @@ class CoverLetterCreatorGUI:
                     description=result.description,
                     output_dir=self.output_dir_var.get(),
                     applicant_name=self.name_var.get(),
-                    mode=CreatorMode.COVER_LETTER,
+                    mode=mode,
                 )
 
                 self.log_message(f"Created: {output_path}")

@@ -219,3 +219,4 @@ __marimo__/
 ./tests/outputs/*
 scripts/run_gui.py
 *.sqlite
+manual.py
