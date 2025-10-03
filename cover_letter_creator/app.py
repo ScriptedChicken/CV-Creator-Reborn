@@ -130,7 +130,9 @@ class CoverLetterCreatorGUI:
         self.status_var.set("Processing...")
         self.log_text.delete(1.0, tk.END)
 
-        thread = threading.Thread(target=self.process_cover_letter, args=(url, template_path))
+        thread = threading.Thread(
+            target=self.process_cover_letter, args=(url, template_path)
+        )
         thread.daemon = True
         thread.start()
 
