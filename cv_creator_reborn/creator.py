@@ -9,7 +9,7 @@ from cv_creator_reborn.documents import DocxHandler
 
 class CreatorMode(Enum):
     CV = "cv"
-    COVER_LETTER = "cover_letter"
+    COVER_LETTER = "cover letter"
 
 
 class Creator:

@@ -1,20 +1,20 @@
 import threading
 import tkinter as tk
+from os.path import basename
 from tkinter import filedialog, messagebox, ttk
 
 import requests
 
 from cv_creator_reborn.apis.seek import SeekApi
 from cv_creator_reborn.creator import Creator, CreatorMode, Replacements
-from os.path import basename
 
 
-class CoverLetterCreatorGUI:
+class CreatorGUI:
     def __init__(
         self, root, name="", template_path="", output_dir="", session=requests.Session()
     ):
         self.root = root
-        self.root.title("Cover Letter Creator")
+        self.root.title("CV / Cover Letter Creator")
         self.root.geometry("600x500")
         self.root.resizable(True, True)
 
@@ -74,7 +74,7 @@ class CoverLetterCreatorGUI:
         output_dir_entry.grid(row=3, column=1, sticky=(tk.W, tk.E), pady=5, padx=(5, 0))
 
         self.process_btn = ttk.Button(
-            main_frame, text="Generate cover letter", command=self.start_processing
+            main_frame, text="Generate document", command=self.start_processing
         )
         self.process_btn.grid(row=4, column=0, columnspan=2, pady=20)
 
@@ -149,12 +149,14 @@ class CoverLetterCreatorGUI:
             self.log_message(f"Using template: {template_path}")
 
             file_name: str = basename(template_path)
-            if file_name.startswith('cv'):
+            if file_name.startswith("cv"):
                 mode = CreatorMode.CV
-            elif file_name.startswith('cover_letter'):
+            elif file_name.startswith("cover_letter"):
                 mode = CreatorMode.COVER_LETTER
             else:
-                print('Couldn\'t interpolate creator mode from file name, using default.')
+                print(
+                    "Couldn't interpolate creator mode from file name, using default."
+                )
                 mode = CreatorMode.COVER_LETTER
 
             creator = Creator(template_path)
@@ -176,9 +178,9 @@ class CoverLetterCreatorGUI:
                 self.log_message(f"Created: {output_path}")
 
             self.log_message(
-                f"Processing completed. {results_count} cover letter(s) generated."
+                f"Processing completed. {results_count} {mode.value}(s) generated."
             )
-            self.status_var.set(f"Completed: {results_count} cover letter(s) generated")
+            self.status_var.set(f"Completed.")
 
         except Exception as e:
             error_msg = f"Error during processing: {str(e)}"
@@ -211,7 +213,7 @@ class CoverLetterCreatorGUI:
 
 def main():
     root = tk.Tk()
-    app = CoverLetterCreatorGUI(root)
+    app = CreatorGUI(root)
     app.root.mainloop()
 
 
