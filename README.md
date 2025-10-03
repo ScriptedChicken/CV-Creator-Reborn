@@ -42,7 +42,7 @@ The tags that can be used are:
 | DATE | The current date when the application is being prepared | "15/01/2024" |
 
 ### ChatGPT Integration
-1. Sign up for a developer's account at ____.
+1. Sign up for a developer's account at [OpenAI developer platform](https://platform.openai.com).
 2. Create an API key.
 3. Add a small amount of credit to the account. ($5 is more than enough.)
 4. Create a `./.env` file in this project.
