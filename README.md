@@ -58,6 +58,10 @@ OPENAI_KEY=sk-proj-ThiS-iS-A_fakE-key
 <CHAT_GPT>In two sentences, write about why this job would provide good learning opportunities. Write this in the first-person perspective of a potential candidate talking to their future boss.</CHAT_GPT>
 ```
 
+Recommendations:
+* Make sure that your queries and tags are on one line. Multi-line queries won't be recognised by the Creator.
+* Test out your queries in browser-based ChatGPT before using them in your templates.
+
 ## Prefilled GUI Values
 
 You can make your own GUI creation script with prefilled GUI values by using the CreatorGUI class. This means that you won't have to fill in the template path / output dir values every time you open the GUI.
