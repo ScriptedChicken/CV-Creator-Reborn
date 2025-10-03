@@ -1,5 +1,5 @@
-from cover_letter_creator.creator import Creator, Replacements
-from cover_letter_creator.seek_api import SeekApi
+from cv_creator_reborn.apis.seek import SeekApi
+from cv_creator_reborn.creator import Creator, Replacements
 
 api = SeekApi()
 url = "https://www.seek.co.nz/job/86924490?cid=company-profile&ref=company-profile"

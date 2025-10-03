@@ -2,8 +2,8 @@ import threading
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
-from cover_letter_creator.creator import Creator, Replacements
-from cover_letter_creator.seek_api import SeekApi
+from cv_creator_reborn.apis.seek import SeekApi
+from cv_creator_reborn.creator import Creator, Replacements
 
 
 class CoverLetterCreatorGUI:
@@ -130,7 +130,9 @@ class CoverLetterCreatorGUI:
         self.status_var.set("Processing...")
         self.log_text.delete(1.0, tk.END)
 
-        thread = threading.Thread(target=self.process_cover_letter, args=(url, template_path))
+        thread = threading.Thread(
+            target=self.process_cover_letter, args=(url, template_path)
+        )
         thread.daemon = True
         thread.start()
 

@@ -1,9 +1,15 @@
 import re
 from datetime import date
+from enum import Enum
 from os.path import join
 
-from cover_letter_creator.data import Replacements
-from cover_letter_creator.documents import DocxHandler
+from cv_creator_reborn.data import Replacements
+from cv_creator_reborn.documents import DocxHandler
+
+
+class CreatorMode(Enum):
+    CV = "cv"
+    COVER_LETTER = "cover_letter"
 
 
 class Creator:
@@ -16,10 +22,13 @@ class Creator:
         description: str | None = None,
         output_dir: str = ".",
         applicant_name: str | None = None,
+        mode: CreatorMode = CreatorMode.COVER_LETTER,
     ):
         ext = self.path.split(".")[-1]
-        file_name = f"cover_letter_{applicant_name}_{replacements.job_title}_{date.today()}.{ext}"
-        file_name = file_name.replace('/', '_')
+        file_name = (
+            f"{mode}_{applicant_name}_{replacements.job_title}_{date.today()}.{ext}"
+        )
+        file_name = file_name.replace("/", "_")
         output_path = (
             join(output_dir, file_name.lower()).replace(" ", "_").replace("-", "_")
         )
