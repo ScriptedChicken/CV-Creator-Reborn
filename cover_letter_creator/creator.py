@@ -19,10 +19,11 @@ class Creator:
     ):
         ext = self.path.split(".")[-1]
         file_name = f"cover_letter_{applicant_name}_{replacements.job_title}_{date.today()}.{ext}"
+        file_name = file_name.replace('/', '_')
         output_path = (
             join(output_dir, file_name.lower()).replace(" ", "_").replace("-", "_")
         )
-        output_path = re.sub(r"_{2:}", "_", output_path)
+        output_path = re.sub(r"_{2,}", "_", output_path)
 
         document = DocxHandler()
         document.open_document(self.path)
