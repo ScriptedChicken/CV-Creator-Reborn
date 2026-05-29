@@ -1,10 +1,7 @@
 import re
 from abc import ABC, abstractmethod
 
-from dotenv import dotenv_values
-from openai import OpenAI
-
-CONFIG = dotenv_values()
+from cv_creator_reborn.opencode_client import ask_opencode
 
 
 class DocumentHandler(ABC):
@@ -42,16 +39,11 @@ class DocxHandler(DocumentHandler):
         except Exception as e:
             raise Exception(f"Error opening .docx file: {e}")
 
-    def return_chat_gpt_response(self, query, job_description):
-        client = OpenAI(api_key=CONFIG["OPENAI_KEY"])
-        message = f"{query}: {job_description}"
-        chat_completion = client.chat.completions.create(
-            messages=[{"role": "user", "content": message}],
-            model="gpt-4.1-mini",
-        )
-        return chat_completion.choices[0].message.content
+    def return_opencode_response(self, query, job_description):
+        prompt = f"{query}: {job_description}"
+        return ask_opencode(prompt)
 
-    def execute_chat_gpt_prompts(self, description):
+    def execute_opencode_prompts(self, description):
         start_tag = "<CHAT_GPT>"
         end_tag = "</CHAT_GPT>"
         for paragraph in self.document.paragraphs:
@@ -61,7 +53,7 @@ class DocxHandler(DocumentHandler):
                     for tag in [start_tag, end_tag]:
                         match = match.replace(tag, "")
 
-                    query_response = self.return_chat_gpt_response(match, description)
+                    query_response = self.return_opencode_response(match, description)
                     placeholder_text = f"{start_tag}{match}{end_tag}"
                     paragraph.text = paragraph.text.replace(
                         placeholder_text, query_response, 1
