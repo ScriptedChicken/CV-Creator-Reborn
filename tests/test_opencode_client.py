@@ -91,7 +91,7 @@ class TestDocxHandlerOpencode:
 
         docx_path = tmp_path / "test.docx"
         doc = Document()
-        doc.add_paragraph("Hello <CHAT_GPT>write a greeting</CHAT_GPT> world")
+        doc.add_paragraph("Hello <AI>write a greeting</AI> world")
         doc.save(str(docx_path))
 
         handler = DocxHandler()
@@ -114,7 +114,7 @@ class TestDocxHandlerOpencode:
         result_doc = Document(str(tmp_path / "out.docx"))
         text = " ".join(p.text for p in result_doc.paragraphs)
         assert "Good day" in text
-        assert "<CHAT_GPT>" not in text
+        assert "<AI>" not in text
 
     def test_free_limit_during_prompt_execution_raises_error(
         self, mocker, tmp_path
@@ -125,7 +125,7 @@ class TestDocxHandlerOpencode:
 
         docx_path = tmp_path / "test.docx"
         doc = Document()
-        doc.add_paragraph("<CHAT_GPT>write a greeting</CHAT_GPT>")
+        doc.add_paragraph("<AI>write a greeting</AI>")
         doc.save(str(docx_path))
 
         handler = DocxHandler()

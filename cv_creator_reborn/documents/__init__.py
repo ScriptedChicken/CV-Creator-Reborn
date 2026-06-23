@@ -44,8 +44,8 @@ class DocxHandler(DocumentHandler):
         return ask_opencode(prompt)
 
     def execute_opencode_prompts(self, description):
-        start_tag = "<CHAT_GPT>"
-        end_tag = "</CHAT_GPT>"
+        start_tag = "<AI>"
+        end_tag = "</AI>"
         for paragraph in self.document.paragraphs:
             matches = re.findall(rf"{start_tag}(.*?){end_tag}", paragraph.text)
             if matches:
